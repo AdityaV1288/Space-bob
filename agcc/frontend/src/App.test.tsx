@@ -39,15 +39,16 @@ test('keeps synchronized orbit state and session draft', async () => {
   expect(sessionStorage.getItem(DRAFT_KEY)).toContain('97.6')
 })
 
-test('applies once and creates the prediction timeline', async () => {
+test('applies once and atomically creates the shared timelines', async () => {
   const user = userEvent.setup(); render(<App />)
   await user.click(screen.getByRole('button', { name: '4 Mission' }))
   await user.click(screen.getByRole('button', { name: 'Apply & create isolated timelines' }))
-  await waitFor(() => expect(fetch).toHaveBeenCalledWith('/api/v1/scenario', expect.objectContaining({ method: 'POST' })))
+  await waitFor(() => expect(fetch).toHaveBeenCalledWith('/api/v1/timelines/initialize', expect.objectContaining({ method: 'POST' })))
   expect(await screen.findByText('Downlink completion')).toBeTruthy()
   expect(screen.getByText('INTERNAL SIMULATION TIME')).toBeTruthy()
   expect(screen.getByText('FEASIBLE · 3000.00 MB fully scheduled')).toBeTruthy()
   expect(screen.getByText(/Frozen forecast ledger/)).toBeTruthy()
+  expect(screen.getByText(/SHARED AUTHORITATIVE BASELINE · MATCHED/)).toBeTruthy()
 })
 
 test('orbit ring conversion round trips', () => {

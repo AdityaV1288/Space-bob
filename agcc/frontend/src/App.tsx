@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { AgccClient, ensureSession, resetSession } from './api'
+import { AgccClient, resetSession } from './api'
 import { AssumptionMark } from './DataStatus'
 import { GlobeView, type GroundPoint, type SatelliteMarker, type StationMarker } from './GlobeView'
 import { LiveWeather, type WeatherVisual } from './LiveWeather'
@@ -23,7 +23,8 @@ const Field = ({ label, children }: { label: string; children: React.ReactNode }
 
 type Opportunity = { pass_id: string; contact_id: string | null; station_id: string; station_name: string; start_at: string; end_at: string; volume_mb: number; classification: string; reason: string; planned_cost?: string | null; actual_volume_mb?: number; completed_at?: string | null; usable_capacity_mb?: number; average_effective_rate_mbps?: number; weather_precipitation_mm_per_hr?: number | null; weather_valid_from?: string | null; weather_quality?: string | null }
 type Contact = { contact_id: string; station_id: string; station_name: string; start_at: string; end_at: string; rate_mbps: number; band: string; anomaly_multiplier: number; target_volume_mb: number; actual_volume_mb: number }
-type SimulationState = { started: boolean; finished: boolean; sim_time: string; deadline_at: string; mission_start_at: string; mission_end_at: string | null; cost_used: string; committed_cost: string; remaining_budget: string; maximum_budget: string; cost_assumed: boolean; delivered_mb: number; remaining_mb: number; paused: boolean; speed: string; satellite: SatelliteMarker; current_contact: Contact | null; predicted_final_mb: number; predicted_shortfall_mb: number; confirmed_shortfall_mb: number; shortfall_status: 'clear' | 'provisional_monitoring' | 'confirmed_action_required'; required_mb: number; resolution_required: boolean; preflight: { capacity_policy: 'frozen' | 'live'; weather_frozen: boolean; ledger_allocated_mb: number; ledger_capacity_mb: number; feasible: boolean }; plan: { plan_id: string; version: number; planned_completion_at: string | null; estimated_total_cost: string }; stations: StationMarker[]; opportunities: Opportunity[]; event_count: number }
+type BaselineIdentity = { snapshot_id: string | null; plan_id: string | null; created_at: string | null; weather_hash: string | null }
+type SimulationState = { started: boolean; finished: boolean; sim_time: string; deadline_at: string; mission_start_at: string; mission_end_at: string | null; cost_used: string; committed_cost: string; remaining_budget: string; maximum_budget: string; cost_assumed: boolean; delivered_mb: number; remaining_mb: number; paused: boolean; speed: string; satellite: SatelliteMarker; current_contact: Contact | null; predicted_final_mb: number; predicted_shortfall_mb: number; confirmed_shortfall_mb: number; shortfall_status: 'clear' | 'provisional_monitoring' | 'confirmed_action_required'; required_mb: number; resolution_required: boolean; preflight: { capacity_policy: 'frozen' | 'live'; weather_frozen: boolean; ledger_allocated_mb: number; ledger_capacity_mb: number; feasible: boolean }; baseline: BaselineIdentity; plan: { plan_id: string; version: number; planned_completion_at: string | null; estimated_total_cost: string }; stations: StationMarker[]; opportunities: Opportunity[]; event_count: number }
 type SimEvent = { event_id: string; sequence_number: number; event_type: string; sim_time: string; contact_id?: string; fragment_id?: string; delivered_volume_mb?: number; rate_mbps?: number; predicted_shortfall_mb?: number; planned_volume_mb?: number | null; planned_cost?: string | null; description: string; station_name?: string | null; source_station_name?: string | null; destination_station_name?: string | null; reroute_reason?: string | null }
 type Runtime = { state: SimulationState; events: SimEvent[]; track: GroundPoint[] }
 type AnomalyProposal = { proposal_id: string; status: string; rate_multiplier: number | null; clarification_questions: string[]; source_text: string; intent: { anomaly_type?: string; station_id?: string; qualitative_severity?: string; suggested_multiplier?: number; confidence?: number; cause?: string; starts_at?: string; ends_at?: string; assumptions?: string[] } }
@@ -32,6 +33,7 @@ type Resolution = { reason: { summary: string; impact: string; action: string; t
 type WatsonStatus = { configured: boolean; status: string; reachable: boolean | null; endpoint?: string; model_id?: string; message?: string }
 type PlanResult = { status: 'feasible' | 'no_feasible_plan_found'; validation_violations?: string[]; planned_volume_mb: number; required_volume_mb: number; estimated_total_cost: string; planned_completion_at?: string | null }
 type InitializationFailure = { kind: 'constraint' | 'error'; message: string; plan?: PlanResult }
+type TimelineInitializeResponse = { status: 'ready' | 'no_feasible_plan_found'; sessions?: Record<MissionMode, string>; states?: Record<MissionMode, SimulationState>; track?: GroundPoint[]; plan: PlanResult; baseline_at: string; baseline?: { snapshot_id: string; plan_id: string; created_at: string; baseline_at: string; weather_hash: string } }
 
 const bandRanges: Record<string, [number, number, number]> = { S: [2, 4, 2.2], X: [8, 12, 9.6], Ka: [26.5, 40, 27.5] }
 const localTime = (value: string) => new Date(value).toLocaleString([], { dateStyle: 'medium', timeStyle: 'medium' })
@@ -204,55 +206,53 @@ function Mission() {
     }
   }, [])
 
-  const initialize = useCallback(async (target: MissionMode, draft: Draft, currentRevision: number) => {
-    if (initializing.current.has(target)) return
-    initializing.current.add(target)
-    setStatuses((current) => ({ ...current, [target]: `Creating isolated ${target} timeline…` }))
-    const client = clients[target]
+  const initializeAll = useCallback(async (draft: Draft, currentRevision: number) => {
+    if (initializing.current.has('prediction')) return
+    initializing.current = new Set(['prediction', 'live', 'branch'])
+    setStatuses({ prediction: 'Building shared authoritative baseline…', live: 'Waiting for shared baseline…', branch: 'Waiting for shared baseline…' })
+    setFailures({})
+    for (const target of ['prediction', 'live', 'branch'] as MissionMode[]) resetSession(clients[target])
     try {
-      setFailures((current) => { const next = { ...current }; delete next[target]; return next })
-      await ensureSession(client)
-      const payload = buildPayload(draft, target, currentRevision)
-      const catalog = await client.request<{ stations: { station_id: string; supported_bands: string[] | null }[] }>('/catalog/stations')
-      const known = new Set(catalog.stations.map((item) => item.station_id))
-      const ids = draft.stations.filter((id) => known.has(id))
-      if (!ids.length) throw new Error('None of the selected station IDs exist in the active catalogue.')
-      payload.scenario.station_ids = ids
-      payload.scenario.constraints.station_selection.authorized_station_ids = ids
-      await client.request('/scenario', { method: 'POST', body: JSON.stringify(payload) })
-      await client.request('/passes/compute', { method: 'POST' })
-      const liveStart = new Date(Math.max(Date.now(), Date.parse(draft.orbit.epoch))).toISOString()
-      const plan = await client.request<PlanResult>('/plan', { method: 'POST', body: JSON.stringify({ plan_id: `plan_${target}_${currentRevision}`, ...(target === 'live' ? { mission_window_start: liveStart } : {}) }) })
-      if (plan.status !== 'feasible') {
-        const detail = plan.validation_violations?.length
-          ? plan.validation_violations.join(' · ')
-          : `Only ${plan.planned_volume_mb.toFixed(2)} of ${plan.required_volume_mb.toFixed(2)} MB can be scheduled under the current constraints.`
-        setFailures((current) => ({ ...current, [target]: { kind: 'constraint', message: detail, plan } }))
-        setStatuses((current) => ({ ...current, [target]: 'Constraint analysis complete' }))
+      const payload = buildPayload(draft, 'prediction', currentRevision)
+      const baselineAt = new Date(Math.max(Date.now(), Date.parse(draft.orbit.epoch))).toISOString()
+      const result = await clients.prediction.request<TimelineInitializeResponse>('/timelines/initialize', {
+        method: 'POST',
+        body: JSON.stringify({ scenario: payload, baseline_at: baselineAt }),
+      })
+      if (result.status !== 'ready' || !result.sessions || !result.states || !result.track) {
+        const detail = result.plan.validation_violations?.length
+          ? result.plan.validation_violations.join(' · ')
+          : `Only ${result.plan.planned_volume_mb.toFixed(2)} of ${result.plan.required_volume_mb.toFixed(2)} MB can be scheduled under the shared constraints.`
+        const failure: InitializationFailure = { kind: 'constraint', message: detail, plan: result.plan }
+        setFailures({ prediction: failure, live: failure, branch: failure })
+        setStatuses({ prediction: 'Constraint analysis complete', live: 'Constraint analysis complete', branch: 'Constraint analysis complete' })
         return
       }
-      const [track, state] = await Promise.all([client.request<GroundPoint[]>('/orbit/ground-track'), client.request<SimulationState>('/simulation/start', { method: 'POST', body: JSON.stringify({ speed: target === 'live' ? '1x' : 'paused', capacity_policy: target === 'live' ? 'live' : 'frozen', ...(target === 'live' ? { sim_start_at: liveStart } : {}) }) })])
-      setRuntimes((current) => ({ ...current, [target]: { state, events: [], track } }))
-      setStatuses((current) => ({ ...current, [target]: `${target} timeline ready` }))
+      for (const target of ['prediction', 'live', 'branch'] as MissionMode[]) {
+        sessionStorage.setItem(sessionKeys[target], result.sessions[target])
+      }
+      const sharedTrack = result.track
+      setRuntimes({
+        prediction: { state: result.states.prediction, events: [], track: sharedTrack },
+        live: { state: result.states.live, events: [], track: sharedTrack },
+        branch: { state: result.states.branch, events: [], track: sharedTrack },
+      })
+      setStatuses({ prediction: 'Shared baseline ready', live: 'Shared baseline ready', branch: 'Shared baseline ready' })
     } catch (error) {
-      const message = error instanceof Error ? error.message : String((error as { message?: string }).message ?? 'Timeline setup failed')
-      setStatuses((current) => ({ ...current, [target]: message }))
-      setFailures((current) => ({ ...current, [target]: { kind: 'error', message } }))
-    } finally { initializing.current.delete(target) }
+      const message = error instanceof Error ? error.message : String((error as { message?: string }).message ?? 'Atomic timeline setup failed')
+      const failure: InitializationFailure = { kind: 'error', message }
+      setFailures({ prediction: failure, live: failure, branch: failure })
+      setStatuses({ prediction: message, live: message, branch: message })
+    } finally {
+      initializing.current.clear()
+    }
   }, [])
 
   useEffect(() => {
     if (!appliedDraft) return
-    for (const target of ['prediction','live','branch'] as MissionMode[]) resetSession(clients[target])
     initializing.current.clear(); setRuntimes({}); setFailures({}); setResolution(null); fetchingResolution.current = {}
-    // Create the three isolated timelines together so every tab is ready after
-    // the initial loading phase. Each keeps its own backend session and clock.
-    void Promise.all(
-      (['prediction','live','branch'] as MissionMode[])
-        .map((target) => initialize(target, appliedDraft, revision)),
-    )
-  }, [appliedDraft, revision, initialize])
-  useEffect(() => { if (appliedDraft && !runtimes[mode] && !failures[mode]) void initialize(mode, appliedDraft, revision) }, [mode, appliedDraft, revision, runtimes, failures, initialize])
+    void initializeAll(appliedDraft, revision)
+  }, [appliedDraft, revision, initializeAll])
   useEffect(() => { const timer = setInterval(() => { for (const target of ['prediction','live','branch'] as MissionMode[]) if (runtimes[target] && !runtimes[target]!.state.paused) void refresh(target) }, 1000); return () => clearInterval(timer) }, [runtimes, refresh])
 
   if (!appliedDraft) return <div className="live-unavailable"><h2>Create your custom satellite first</h2><p>The mission controller will remain mounted after creation, including while you return to Setup.</p></div>
@@ -273,7 +273,7 @@ function Mission() {
         useMissionStore.getState().updateDraft(patch)
         useMissionStore.getState().applyDraft()
       }
-      return <><div className="mission-toolbar"><ModeTabs/></div><div className="constraint-backdrop"><section className="constraint-dialog" role="dialog" aria-modal="true"><span className="eyebrow">{mode.toUpperCase()} · CONSTRAINT DECISION REQUIRED</span><h2>{failure.kind === 'constraint' ? 'The requested mission is not feasible as configured' : 'Timeline initialization stopped'}</h2>{failure.kind === 'constraint' ? <><div className="constraint-numbers"><div><small>BEST-CASE TRANSFER</small><strong>{transferable.toFixed(2)} MB</strong></div><div><small>REQUESTED</small><strong>{required.toFixed(2)} MB</strong></div><div><small>UNRESOLVED</small><strong>{shortfall.toFixed(2)} MB</strong></div></div><p>The planner maximized executable transfer while respecting the present station set, deadline, and budget. It has finished calculating; nothing is still loading.</p><p className="constraint-detail">{failure.message}</p><div className="constraint-options"><button onClick={() => applyConstraint({ budget: suggestedBudget })}><b>Approve suggested budget</b><span>Raise ceiling from USD {appliedDraft.budget.toFixed(2)} to USD {suggestedBudget.toFixed(2)} and recalculate all timelines.</span></button><button onClick={() => applyConstraint({ deadline: suggestedDeadline })}><b>Approve suggested time</b><span>Extend deadline to {localTime(suggestedDeadline)} and recalculate all timelines.</span></button></div><small>Suggestions are conservative search starting points, not claims of guaranteed feasibility. The recalculation validates the chosen change against actual future passes and costs before a route is accepted.</small></> : <><p>{failure.message}</p><p>This is a terminal error, not a background loading operation.</p><button onClick={() => { resetSession(clients[mode]); setFailures((current) => { const next = { ...current }; delete next[mode]; return next }); void initialize(mode, appliedDraft, revision) }}>Retry this isolated timeline</button></>}</section></div></>
+      return <><div className="mission-toolbar"><ModeTabs/></div><div className="constraint-backdrop"><section className="constraint-dialog" role="dialog" aria-modal="true"><span className="eyebrow">{mode.toUpperCase()} · CONSTRAINT DECISION REQUIRED</span><h2>{failure.kind === 'constraint' ? 'The requested mission is not feasible as configured' : 'Timeline initialization stopped'}</h2>{failure.kind === 'constraint' ? <><div className="constraint-numbers"><div><small>BEST-CASE TRANSFER</small><strong>{transferable.toFixed(2)} MB</strong></div><div><small>REQUESTED</small><strong>{required.toFixed(2)} MB</strong></div><div><small>UNRESOLVED</small><strong>{shortfall.toFixed(2)} MB</strong></div></div><p>The planner maximized executable transfer while respecting the present station set, deadline, and budget. It has finished calculating; nothing is still loading.</p><p className="constraint-detail">{failure.message}</p><div className="constraint-options"><button onClick={() => applyConstraint({ budget: suggestedBudget })}><b>Approve suggested budget</b><span>Raise ceiling from USD {appliedDraft.budget.toFixed(2)} to USD {suggestedBudget.toFixed(2)} and recalculate all timelines.</span></button><button onClick={() => applyConstraint({ deadline: suggestedDeadline })}><b>Approve suggested time</b><span>Extend deadline to {localTime(suggestedDeadline)} and recalculate all timelines.</span></button></div><small>Suggestions are conservative search starting points, not claims of guaranteed feasibility. The recalculation validates the chosen change against actual future passes and costs before a route is accepted.</small></> : <><p>{failure.message}</p><p>This is a terminal error, not a background loading operation.</p><button onClick={() => void initializeAll(appliedDraft, revision)}>Retry all timelines atomically</button></>}</section></div></>
     }
     return <><div className="mission-toolbar"><ModeTabs/></div><div className="loading-data-art"><div className="loading-content"><div className="spinner-rings"><div className="ring1"></div><div className="ring2"></div><div className="ring3"></div></div><h2>{statuses[mode] ?? 'INITIALIZING MISSION PROTOCOLS...'}</h2><p>Syncing orbital parameters and precomputing contact windows.</p><div className="loading-bar-container"><div className="loading-bar-fill"></div></div></div></div></>
   }
@@ -344,14 +344,15 @@ function Mission() {
   const resetBranch = (simTime: string, deliveredMb: number) => clients.branch.request<SimulationState>('/simulation/fork', { method: 'POST', body: JSON.stringify({ sim_time: simTime, delivered_mb: deliveredMb }) }).then((next) => {
     setRuntimes((current) => ({ ...current, branch: { ...(current.branch ?? runtime), state: next, events: [] } }))
   })
-  const branchFromPrediction = () => appliedDraft
-    ? initialize('branch', appliedDraft, revision).then(() => resetBranch(state.sim_time, state.delivered_mb)).then(() => setMode('branch')).catch((error) => setStatuses((current) => ({ ...current, branch: error.message ?? 'Could not create anomaly branch.' })))
-    : Promise.resolve()
+  const branchFromPrediction = () => resetBranch(state.sim_time, state.delivered_mb).then(() => setMode('branch')).catch((error) => setStatuses((current) => ({ ...current, branch: error.message ?? 'Could not create anomaly branch.' })))
   const prepareResolution = () => { setResolutionError(''); client.request<ReplanProposal>('/replans', { method: 'POST', body: JSON.stringify({ reason: 'Predicted deadline shortfall requires a validated feasible resolution path' }) }).then((proposal) => { if (!proposal) throw new Error('No forward proposal could be produced from the current instant.'); setResolutionProposal(proposal) }).catch((error) => setResolutionError(error.message ?? 'Resolution calculation failed.')) }
   const approveResolution = () => resolutionProposal && client.request(`/replans/${resolutionProposal.proposal_id}/approve`, { method: 'POST', body: JSON.stringify({ reason: 'User approved the validated shortfall resolution' }) }).then(() => { setResolutionProposal(null); setResolution(null); fetchingResolution.current[mode] = false; void refresh(mode) }).catch((error) => setResolutionError(error.message ?? 'Approval failed due to a server error.'))
 
   const predictionBlocked = mode === 'prediction' && state.predicted_shortfall_mb > 1e-9
+  const hasSharedBaseline = Boolean(state.baseline.snapshot_id && state.baseline.plan_id)
+  const divergedFromBaseline = hasSharedBaseline && state.plan.plan_id !== state.baseline.plan_id
   return <><div className="mission-toolbar"><ModeTabs/><div className="clock-controls"><b>{mode === 'live' ? `LIVE SYSTEM TIME · ${localZone}` : 'INTERNAL SIMULATION TIME'}</b><span>{mode === 'live' ? localTime(state.sim_time) : new Date(state.sim_time).toISOString()}<AssumptionMark reason={mode === 'live' ? 'Live mode advances at 1× wall-clock time; displayed in this device’s time zone.' : 'Authoritative modeled time, not spacecraft telemetry.'}/></span>{mode !== 'live' && <><button disabled={predictionBlocked && state.paused} onClick={toggle}>{state.paused ? 'Start' : 'Pause'}</button>{['1x','10x','100x','1000x'].map((speed) => <button className={state.speed === speed ? 'active' : ''} onClick={() => setSpeed(speed)} key={speed}>{speed}</button>)}</>}{mode === 'live' && <span className="live-lock">REAL TIME · 1× · CONTINUES DURING APPROVAL</span>}</div></div>
+    {hasSharedBaseline && <section className="baseline-identity panel"><b>SHARED AUTHORITATIVE BASELINE · {divergedFromBaseline ? 'DIVERGED WITH RECORDED PLAN VERSION' : 'MATCHED'}</b><span>Snapshot {state.baseline.snapshot_id} · initial plan {state.baseline.plan_id} · current plan {state.plan.plan_id}</span><small>Weather ledger {state.baseline.weather_hash?.slice(0, 16)}… · created {state.baseline.created_at ? localTime(state.baseline.created_at) : 'unknown'}. Prediction and Live began with identical contacts, allocations, costs, passes, and normalized weather.</small></section>}
     {mode === 'prediction' && <section className="branch-banner panel"><b>TEST A WHAT-IF FROM THIS EXACT MOMENT</b><span>The Prediction timeline remains untouched. The Anomaly timeline receives this timestamp and delivered-volume snapshot.</span><button type="button" onClick={branchFromPrediction}>Branch here & inject anomaly</button></section>}
     {mode === 'prediction' && <section className={`preflight-status panel ${state.preflight.feasible ? 'ready' : 'blocked'}`}><b>{state.preflight.feasible ? `FEASIBLE · ${state.preflight.ledger_allocated_mb.toFixed(2)} MB fully scheduled` : 'PREFLIGHT BLOCKED'}</b><span>Frozen forecast ledger · executable capacity {state.preflight.ledger_capacity_mb.toFixed(2)} MB · weather will not refresh during Prediction.</span></section>}
     {mode === 'branch' && <AnomalyChat runtime={runtime} refresh={() => void refresh('branch')} resetToStart={() => { if (appliedDraft) void resetBranch(appliedDraft.orbit.epoch, 0) }}/>} {mode === 'live' && <section className="live-banner panel"><b>LIVE EXECUTION TIMELINE</b><span>Open-Meteo forecasts feed the capacity model; contact-close redistribution moves undelivered fragments to upcoming approved contacts. New stations remain approval-gated.</span></section>}
@@ -370,7 +371,7 @@ export default function App() {
   const [path, setPath] = useState(initialPath)
   const [connection, setConnection] = useState('CONNECTING')
   const { appliedDraft } = useMissionStore()
-  useEffect(() => { if (location.pathname !== initialPath) history.replaceState({}, '', initialPath); const pop = () => setPath(location.pathname); addEventListener('popstate', pop); clients.prediction.createSession().then((session) => { sessionStorage.setItem(sessionKeys.prediction, session); setConnection('BACKEND READY') }).catch(() => setConnection('BACKEND OFFLINE')); return () => removeEventListener('popstate', pop) }, [])
+  useEffect(() => { if (location.pathname !== initialPath) history.replaceState({}, '', initialPath); const pop = () => setPath(location.pathname); addEventListener('popstate', pop); fetch('/api/v1/health').then((response) => { if (!response.ok) throw new Error('Backend unavailable'); setConnection('BACKEND READY') }).catch(() => setConnection('BACKEND OFFLINE')); return () => removeEventListener('popstate', pop) }, [])
   const setupVisible = path.startsWith('/setup/')
   return <main className="app-shell"><header className="topbar"><div className="brand-lockup"><div className="brand-mark">A</div><div><span className="eyebrow">AUTONOMOUS GROUND CONTACT CONTROL</span><h1>Custom Satellite Downlink</h1></div></div><nav className="main-nav"><button disabled={!appliedDraft} className={path === '/mission' ? 'active' : ''} onClick={() => navigate('/mission', setPath)}>Mission</button><button className={setupVisible ? 'active' : ''} onClick={() => navigate('/setup/orbit', setPath)}>Setup</button></nav><div className="mission-status"><span className={`status-chip ${connection === 'BACKEND READY' ? 'live' : ''}`}><i/>{connection}</span></div></header><div hidden={!setupVisible}><Setup path={path} setPath={setPath}/></div><div hidden={setupVisible}><Mission/></div></main>
 }

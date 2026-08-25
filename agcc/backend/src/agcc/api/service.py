@@ -313,7 +313,11 @@ class AgccApplicationService:
         runtime.weather_snapshots = sorted(
             merged.values(), key=lambda item: (item.valid_from, item.station_id)
         )
-        return runtime.weather_snapshots
+        return [
+            item
+            for item in runtime.weather_snapshots
+            if item.station_id in planned_station_ids
+        ]
 
     def _fetch_weather(
         self, stations: dict[str, Any], start: datetime, end: datetime
@@ -1086,6 +1090,12 @@ class AgccApplicationService:
                     <= 1e-6
                     and ledger_capacity_mb + 1e-6 >= ledger_allocated_mb
                 ),
+            },
+            "baseline": {
+                "snapshot_id": runtime.baseline_snapshot_id,
+                "plan_id": runtime.baseline_plan_id,
+                "created_at": runtime.baseline_created_at,
+                "weather_hash": runtime.baseline_weather_hash,
             },
             "plan": {
                 "plan_id": plan.plan_id,

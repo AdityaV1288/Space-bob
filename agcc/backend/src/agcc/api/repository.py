@@ -17,6 +17,10 @@ from agcc.simulation import SessionEventStore, SimulationEngine
 @dataclass
 class ScenarioRuntime:
     definition: ScenarioCreateRequest
+    baseline_snapshot_id: str | None = None
+    baseline_plan_id: str | None = None
+    baseline_created_at: datetime | None = None
+    baseline_weather_hash: str | None = None
     passes: list[CandidatePass] = field(default_factory=list)
     capacities: list[CapacityEstimate] = field(default_factory=list)
     weather_snapshots: list[WeatherSnapshot] = field(default_factory=list)

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import secrets
 from copy import deepcopy
@@ -55,6 +56,8 @@ class SessionState:
     anomalies: AnomalyService = field(default_factory=AnomalyService)
     replanner: ForwardReplanner = field(default_factory=ForwardReplanner)
     scenario_id: str | None = None
+    timeline_mode: str | None = None
+    baseline_locked: bool = False
     last_active_at: datetime = field(default_factory=lambda: datetime.now(UTC))
     replan_lock: Lock = field(default_factory=Lock, repr=False)
 
@@ -112,6 +115,11 @@ class SimulationSpeedRequest(BaseModel):
 
 class AnomalyChatRequest(BaseModel):
     text: str
+
+
+class TimelineInitializeRequest(BaseModel):
+    scenario: ScenarioCreateRequest
+    baseline_at: datetime | None = None
 
 
 def _llm_failure(exc: Exception) -> dict[str, str]:
@@ -175,6 +183,141 @@ def create_v1_router(container: AppContainer) -> APIRouter:
     def create_session() -> SessionResponse:
         created = container.sessions.create()
         return SessionResponse(session_id=created.session_id)
+
+    @router.get("/health", operation_id="healthCheck")
+    def health_check() -> dict[str, str]:
+        return {"status": "ready"}
+
+    @router.post("/timelines/initialize", operation_id="initializeTimelines")
+    def initialize_timelines(body: TimelineInitializeRequest) -> Any:
+        """Build one authoritative ledger, then fork all three timelines atomically."""
+        created_sessions: list[SessionState] = []
+        try:
+            prediction = container.sessions.create()
+            created_sessions.append(prediction)
+            definition = body.scenario
+            release_at = definition.mission.release_at
+            baseline_at = body.baseline_at or max(datetime.now(UTC), release_at)
+            if baseline_at >= definition.mission.deadline_at:
+                raise HTTPException(
+                    status_code=422,
+                    detail={"code": "BASELINE_AFTER_DEADLINE"},
+                )
+
+            base_runtime = prediction.service.create_scenario(definition)
+            prediction.scenario_id = definition.scenario.scenario_id
+            prediction.service.generate_passes(prediction.scenario_id)
+            prediction.service.compute_capacities(prediction.scenario_id)
+            prediction.service.feasibility(prediction.scenario_id, refresh_capacity=False)
+            plan = prediction.service.create_plan(
+                prediction.scenario_id,
+                "plan_shared_baseline01",
+                mission_window_start=baseline_at,
+            )
+            if plan.status.value != "feasible":
+                for session in created_sessions:
+                    container.sessions.delete(session.session_id)
+                return {
+                    "status": "no_feasible_plan_found",
+                    "plan": plan,
+                    "baseline_at": baseline_at,
+                }
+
+            weather_payload = [
+                item.model_dump(mode="json") for item in base_runtime.weather_snapshots
+            ]
+            weather_hash = hashlib.sha256(
+                json.dumps(weather_payload, sort_keys=True, separators=(",", ":")).encode()
+            ).hexdigest()
+            snapshot_seed = (
+                f"{definition.scenario.scenario_id}|{baseline_at.isoformat()}|"
+                f"{plan.plan_id}|{weather_hash}"
+            )
+            snapshot_id = "baseline_" + hashlib.sha256(
+                snapshot_seed.encode()
+            ).hexdigest()[:20]
+            created_at = datetime.now(UTC)
+            for runtime_copy in (base_runtime,):
+                runtime_copy.baseline_snapshot_id = snapshot_id
+                runtime_copy.baseline_plan_id = plan.plan_id
+                runtime_copy.baseline_created_at = created_at
+                runtime_copy.baseline_weather_hash = weather_hash
+
+            live = container.sessions.create()
+            branch = container.sessions.create()
+            created_sessions.extend([live, branch])
+            for target in (live, branch):
+                cloned_runtime = deepcopy(base_runtime)
+                target.service.repository.add(cloned_runtime)
+                target.scenario_id = definition.scenario.scenario_id
+
+            prediction.timeline_mode = "prediction"
+            live.timeline_mode = "live"
+            branch.timeline_mode = "branch"
+            prediction.baseline_locked = True
+            live.baseline_locked = True
+            branch.baseline_locked = True
+
+            prediction.service.start_simulation(
+                prediction.scenario_id,
+                plan_id=plan.plan_id,
+                sim_start_at=baseline_at,
+                speed="paused",
+                capacity_policy="frozen",
+            )
+            live.service.start_simulation(
+                live.scenario_id or "",
+                plan_id=plan.plan_id,
+                sim_start_at=baseline_at,
+                speed="1x",
+                capacity_policy="live",
+            )
+            branch.service.start_simulation(
+                branch.scenario_id or "",
+                plan_id=plan.plan_id,
+                sim_start_at=baseline_at,
+                speed="paused",
+                capacity_policy="frozen",
+            )
+            track = prediction.service.ground_track(
+                prediction.scenario_id,
+                HorizonRequest(
+                    start_at=definition.mission.release_at,
+                    end_at=definition.mission.deadline_at,
+                    step_s=300,
+                ),
+            )
+            return {
+                "status": "ready",
+                "baseline": {
+                    "snapshot_id": snapshot_id,
+                    "plan_id": plan.plan_id,
+                    "created_at": created_at,
+                    "baseline_at": baseline_at,
+                    "weather_hash": weather_hash,
+                },
+                "sessions": {
+                    "prediction": prediction.session_id,
+                    "live": live.session_id,
+                    "branch": branch.session_id,
+                },
+                "states": {
+                    "prediction": prediction.service.simulation_state(
+                        prediction.scenario_id
+                    ),
+                    "live": live.service.simulation_state(live.scenario_id or ""),
+                    "branch": branch.service.simulation_state(branch.scenario_id or ""),
+                },
+                "track": track,
+                "plan": plan,
+            }
+        except Exception:
+            for session in created_sessions:
+                try:
+                    container.sessions.delete(session.session_id)
+                except HTTPException:
+                    pass
+            raise
 
     @router.delete("/sessions/{session_id}", operation_id="deleteSession")
     def delete_session(session_id: str) -> dict[str, bool]:
@@ -287,6 +430,17 @@ def create_v1_router(container: AppContainer) -> APIRouter:
 
     @router.post("/plan", operation_id="createPlan")
     def create_plan(body: PlanRequest, session: SessionState = Depends(state)) -> Any:
+        if session.baseline_locked:
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": "BASELINE_PLAN_LOCKED",
+                    "message": (
+                        "This timeline began from a shared authoritative baseline. "
+                        "Create a versioned replan proposal and approve it instead."
+                    ),
+                },
+            )
         ident = scenario_id(session)
         session.service.compute_capacities(ident)
         session.service.feasibility(ident, refresh_capacity=False)
@@ -585,9 +739,7 @@ def create_v1_router(container: AppContainer) -> APIRouter:
         candidate = None
         if future.status.value == "feasible":
             preserved = [item for item in old.contacts if item.start_at <= replan_at]
-            combined_contacts = sorted(
-                [*preserved, *future.contacts], key=lambda item: item.start_at
-            )
+            combined_contacts = [*preserved, *future.contacts]
             combined_cost = sum(
                 Decimal(item.contact_cost_decimal) for item in combined_contacts
             )

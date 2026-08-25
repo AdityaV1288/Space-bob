@@ -29,6 +29,53 @@ def test_session_create_isolation_and_delete() -> None:
     ).status_code == 200
 
 
+def test_atomic_timeline_initialization_shares_one_baseline_plan() -> None:
+    client = TestClient(create_app())
+    payload = scenario_payload()
+    mission = payload["mission"]
+    assert isinstance(mission, dict)
+    baseline_at = mission["release_at"]
+    response = client.post(
+        "/api/v1/timelines/initialize",
+        json={"scenario": payload, "baseline_at": baseline_at},
+    )
+    assert response.status_code == 200, response.text
+    body = response.json()
+    assert body["status"] == "ready"
+    assert len(set(body["sessions"].values())) == 3
+    states = body["states"]
+    baseline_ids = {
+        states[mode]["baseline"]["snapshot_id"]
+        for mode in ("prediction", "live", "branch")
+    }
+    plan_ids = {
+        states[mode]["baseline"]["plan_id"]
+        for mode in ("prediction", "live", "branch")
+    }
+    routes = {
+        mode: [
+            (item["contact_id"], item["station_id"], item["volume_mb"])
+            for item in states[mode]["opportunities"]
+            if item["contact_id"]
+        ]
+        for mode in ("prediction", "live", "branch")
+    }
+    assert len(baseline_ids) == 1
+    assert len(plan_ids) == 1
+    assert routes["prediction"] == routes["live"] == routes["branch"]
+    assert states["prediction"]["paused"] is True
+    assert states["live"]["paused"] is False
+    assert states["branch"]["paused"] is True
+    live_headers = {"X-AGCC-Session": body["sessions"]["live"]}
+    unapproved_plan = client.post(
+        "/api/v1/plan",
+        json={"plan_id": "plan_unapprovedlive01"},
+        headers=live_headers,
+    )
+    assert unapproved_plan.status_code == 409
+    assert unapproved_plan.json()["error"]["code"] == "BASELINE_PLAN_LOCKED"
+
+
 def test_inactive_sessions_are_evicted_after_twenty_four_hours() -> None:
     repository = SessionRepository()
     state = repository.create()
