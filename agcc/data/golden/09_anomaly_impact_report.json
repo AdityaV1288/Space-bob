@@ -1,0 +1,16 @@
+{
+  "affected_contact_ids": [
+    "contact_eebf068142f8f69f"
+  ],
+  "anomaly_id": "anomaly_c3773741b6580660",
+  "anomaly_type": "station_unavailable",
+  "assumptions": [],
+  "cause": null,
+  "confidence": null,
+  "description": "Golden fixture outage after first executed contact",
+  "ends_at": null,
+  "estimated_capacity_reduction_mb": 623.469280013,
+  "rate_multiplier": 0.0,
+  "starts_at": "2026-08-21T00:23:46.406250Z",
+  "station_id": "station_demo_eastasia"
+}

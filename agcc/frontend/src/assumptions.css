@@ -1,0 +1,53 @@
+/* ─── ASSUMPTION MARK ────────────────────────────────────────────────────── */
+.assumption-mark {
+  display: inline-grid;
+  place-items: center;
+  margin-left: 5px;
+  color: var(--blue);
+  font: 600 10px var(--font-mono);
+  cursor: help;
+  vertical-align: super;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.assumption-mark:hover { opacity: 1; }
+
+/* ─── CATALOG DISCLOSURE ─────────────────────────────────────────────────── */
+.catalog-disclosure {
+  padding: 9px 14px;
+  border: 1px solid rgba(167, 139, 250, 0.18);
+  background: rgba(167, 139, 250, 0.05);
+  color: #ddd6fe;
+  font-size: 11px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 14px;
+  line-height: 1.55;
+}
+
+/* ─── STATION FILTER EXTRAS ──────────────────────────────────────────────── */
+.station-filters > span {
+  align-self: center;
+  margin-left: auto;
+  color: var(--text-muted);
+  font: 400 10px var(--font-mono);
+  white-space: nowrap;
+}
+
+.station-select label > span {
+  display: grid;
+  gap: 4px;
+}
+
+.station-select label > span small { text-transform: none; }
+
+/* ─── CATALOG ERROR ──────────────────────────────────────────────────────── */
+.catalog-error {
+  padding: 14px 16px;
+  border: 1px solid rgba(248, 113, 113, 0.30);
+  background: rgba(248, 113, 113, 0.05);
+  color: #fca5a5;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  line-height: 1.5;
+}

@@ -1,0 +1,71 @@
+{
+  "$defs": {
+    "AnomalyType": {
+      "enum": [
+        "weather",
+        "link_degradation",
+        "station_unavailable",
+        "satellite_attitude",
+        "other"
+      ],
+      "title": "AnomalyType",
+      "type": "string"
+    },
+    "ProposalStatus": {
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "superseded"
+      ],
+      "title": "ProposalStatus",
+      "type": "string"
+    }
+  },
+  "description": "A Granite-parsed proposal arising from a detected anomaly.",
+  "properties": {
+    "affected_contact_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Affected Contact Ids",
+      "type": "array"
+    },
+    "anomaly_text": {
+      "title": "Anomaly Text",
+      "type": "string"
+    },
+    "anomaly_type": {
+      "$ref": "#/$defs/AnomalyType"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "proposal_id": {
+      "description": "Unique proposal ID (prefix: proposal_)",
+      "title": "Proposal Id",
+      "type": "string"
+    },
+    "proposed_contact_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Proposed Contact Ids",
+      "type": "array"
+    },
+    "status": {
+      "$ref": "#/$defs/ProposalStatus",
+      "default": "pending"
+    }
+  },
+  "required": [
+    "proposal_id",
+    "anomaly_type",
+    "anomaly_text",
+    "created_at"
+  ],
+  "title": "AnomalyProposal",
+  "type": "object"
+}

@@ -1,0 +1,5 @@
+{
+  "_comment": "TEMPLATE — approved scientific coefficients have NOT been supplied. Do not populate factors from Bob or any untrusted source. Replace this file with peer-reviewed attenuation data before enabling ConfiguredWeatherAttenuationModel in production.",
+  "version": "TEMPLATE_UNAPPROVED",
+  "entries": []
+}

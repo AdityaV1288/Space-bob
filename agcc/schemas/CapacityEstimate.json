@@ -1,0 +1,75 @@
+{
+  "description": "Estimated physical transfer capacity for a pass (Task 08).",
+  "properties": {
+    "assumptions": {
+      "description": "List of assumption labels applied during estimation",
+      "items": {
+        "type": "string"
+      },
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "average_effective_rate_mbps": {
+      "description": "Average effective rate across samples in Mbit/s",
+      "minimum": 0.0,
+      "title": "Average Effective Rate Mbps",
+      "type": "number"
+    },
+    "base_rate_mbps": {
+      "description": "min(satellite, station) rate in Mbit/s",
+      "minimum": 0.0,
+      "title": "Base Rate Mbps",
+      "type": "number"
+    },
+    "capacity_id": {
+      "description": "Unique capacity ID (prefix: capacity_)",
+      "title": "Capacity Id",
+      "type": "string"
+    },
+    "model_version": {
+      "description": "Capacity model version identifier",
+      "title": "Model Version",
+      "type": "string"
+    },
+    "pass_id": {
+      "title": "Pass Id",
+      "type": "string"
+    },
+    "peak_effective_rate_mbps": {
+      "description": "Peak per-sample effective rate in Mbit/s",
+      "minimum": 0.0,
+      "title": "Peak Effective Rate Mbps",
+      "type": "number"
+    },
+    "sample_count": {
+      "description": "Number of 10-second integration samples",
+      "minimum": 0,
+      "title": "Sample Count",
+      "type": "integer"
+    },
+    "usable_capacity_mb": {
+      "description": "Total usable capacity in decimal MB",
+      "minimum": 0.0,
+      "title": "Usable Capacity Mb",
+      "type": "number"
+    },
+    "weather_data_quality": {
+      "description": "Source quality of weather data used (verified/stale/unavailable/assumed)",
+      "title": "Weather Data Quality",
+      "type": "string"
+    }
+  },
+  "required": [
+    "capacity_id",
+    "pass_id",
+    "base_rate_mbps",
+    "usable_capacity_mb",
+    "average_effective_rate_mbps",
+    "peak_effective_rate_mbps",
+    "weather_data_quality",
+    "model_version",
+    "sample_count"
+  ],
+  "title": "CapacityEstimate",
+  "type": "object"
+}

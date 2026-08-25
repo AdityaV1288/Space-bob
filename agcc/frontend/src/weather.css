@@ -1,0 +1,80 @@
+/* ─── LIVE WEATHER PANEL ─────────────────────────────────────────────────── */
+.live-weather {
+  min-height: 480px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+}
+
+.live-weather h2 { margin: 6px 0 20px; font-size: 17px; }
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.weather-grid article {
+  padding: 16px;
+  border: 1px solid var(--border-cyan);
+  background: var(--cyan-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease;
+}
+
+.weather-grid article:hover { border-color: rgba(34, 211, 238, 0.40); }
+
+.weather-grid article > span {
+  display: block;
+  color: var(--text-muted);
+  text-transform: capitalize;
+  font: 500 9px var(--font-mono);
+  letter-spacing: 0.10em;
+}
+
+.weather-grid article > strong {
+  display: block;
+  margin: 12px 0;
+  font: 600 28px var(--font-mono);
+  color: var(--cyan);
+  line-height: 1;
+}
+
+.weather-grid dl div {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.weather-grid dl div:last-child { border-bottom: none; }
+
+.weather-grid dt, .weather-grid dd, .weather-grid small { font-size: 10px; }
+.weather-grid dt  { color: var(--text-muted); }
+.weather-grid dd  { color: var(--text-primary); font-family: var(--font-mono); }
+
+.weather-grid small {
+  display: block;
+  margin-top: 12px;
+  color: var(--text-dim);
+  font-size: 10px;
+}
+
+.weather-error {
+  display: grid;
+  gap: 7px;
+  padding: 16px;
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  background: rgba(248, 113, 113, 0.05);
+  border-radius: var(--radius-md);
+}
+
+.weather-error b { color: var(--red); font-size: 12px; }
+
+.weather-caveat {
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.55;
+}

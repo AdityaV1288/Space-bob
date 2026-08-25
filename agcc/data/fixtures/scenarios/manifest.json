@@ -1,0 +1,16 @@
+{
+  "schema_version": "golden-scenario-manifest.v1",
+  "model_versions": {
+    "planner": "planner_v1",
+    "capacity": "capacity_v1",
+    "simulation": "task12",
+    "anomaly_policy": "anomaly-policies.v1"
+  },
+  "fixture_sha256": {
+    "scenario_a_feasible.json": "17ddbfae0d8878b7361d7ce852d1ced039ed5d7c5bbf0d9f87dbdfad24244d11",
+    "scenario_b_redistribution.json": "5c75eda0eb44039715b4d552302493e3aec48cc5ba065df7a50fe294e58c6dc1",
+    "scenario_c_approval.json": "46ef4ce317d476081162eb1174dd227ddf5a4c1ef97f80ce08f48fb6ebccb087",
+    "scenario_d_relaxation.json": "0932d4670be52f3df901086274001fea3976b0214e42999c6c281d1c0522759d",
+    "scenario_e_natural_language.json": "c0db4377768fcfe266d4e1bc782acb3915f98a3024d96136315276a09d22ad60"
+  }
+}

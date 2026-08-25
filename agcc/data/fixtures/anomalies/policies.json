@@ -1,0 +1,26 @@
+{
+  "schema_version": "anomaly-policies.v1",
+  "policies": {
+    "station_outage": {
+      "enabled": true,
+      "multiplier": 0.0,
+      "source": "governing deterministic outage rule"
+    },
+    "rate_degradation": {
+      "enabled": true,
+      "requires_explicit_percentage": false,
+      "severity_reduction_pct": {"low": 15, "medium": 35, "high": 60, "severe": 80},
+      "source": "Granite qualitative classification mapped through a bounded deterministic table"
+    },
+    "heavy_rain_scenario": {
+      "enabled": false,
+      "multiplier": null,
+      "source": "approved coefficients not supplied"
+    },
+    "contact_delay": {
+      "enabled": true,
+      "requires_explicit_delay_s": true,
+      "source": "user-stated delay only"
+    }
+  }
+}

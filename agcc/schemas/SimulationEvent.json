@@ -1,0 +1,82 @@
+{
+  "$defs": {
+    "EventType": {
+      "enum": [
+        "contact_started",
+        "contact_ended",
+        "fragment_delivered",
+        "anomaly_detected",
+        "plan_revised",
+        "simulation_started",
+        "simulation_ended"
+      ],
+      "title": "EventType",
+      "type": "string"
+    }
+  },
+  "description": "An append-only record of something that occurred during simulation.",
+  "properties": {
+    "contact_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Contact Id"
+    },
+    "delivered_volume_mb": {
+      "anyOf": [
+        {
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Delivered Volume Mb"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "event_id": {
+      "description": "Unique event ID (prefix: event_)",
+      "title": "Event Id",
+      "type": "string"
+    },
+    "event_type": {
+      "$ref": "#/$defs/EventType"
+    },
+    "fragment_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fragment Id"
+    },
+    "occurred_at": {
+      "format": "date-time",
+      "title": "Occurred At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "event_id",
+    "event_type",
+    "occurred_at"
+  ],
+  "title": "SimulationEvent",
+  "type": "object"
+}

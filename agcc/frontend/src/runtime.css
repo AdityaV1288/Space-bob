@@ -1,0 +1,79 @@
+/* ─── RUNTIME CSS — Legend, source grid, anomaly workbench ──────────────── */
+
+/* Legend items on globe caption */
+.earth-caption .legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 12px 0 0;
+  text-transform: uppercase;
+  font: 500 9px var(--font-mono);
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.5);
+}
+
+.earth-caption .legend-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.earth-caption .legend-item.active::before   { background: #22d3ee; box-shadow: 0 0 5px #22d3ee; }
+.earth-caption .legend-item.planned::before  { background: #60a5fa; box-shadow: 0 0 5px #60a5fa; }
+.earth-caption .legend-item.candidate::before { background: #a78bfa; }
+.earth-caption .legend-item.unused::before   { background: #475569; }
+
+/* Source grid (live sources page) */
+.source-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.source-card {
+  padding: 24px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+}
+
+.source-card h2 { margin: 8px 0; font-size: 16px; }
+
+.source-card p {
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-size: 13px;
+}
+
+/* Anomaly workbench styles moved to v2.css;
+   this file only provides layout adjustments */
+.anomaly-workbench { padding: 20px; }
+.anomaly-workbench h2 { margin: 6px 0 14px; }
+
+.anomaly-fields {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(130px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.anomaly-actions { margin-top: 10px; }
+
+.anomaly-actions button,
+.anomaly-fields button {
+  min-height: 36px;
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+/* Pass row approved color  */
+.pass-row.approved i { color: var(--green); }
+.pass-row.approved.complete i { color: var(--green); }
+.pass-row.approved.active i { color: var(--amber); }
+
+@media (max-width: 640px) {
+  .anomaly-fields, .source-grid { grid-template-columns: 1fr; }
+}

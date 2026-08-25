@@ -1,0 +1,47 @@
+{
+  "$defs": {
+    "ContactCommitment": {
+      "enum": [
+        "none",
+        "planned",
+        "committed"
+      ],
+      "title": "ContactCommitment",
+      "type": "string"
+    }
+  },
+  "description": "Assignment of a data fragment to a planned or committed contact.",
+  "properties": {
+    "allocated_volume_mb": {
+      "minimum": 0.0,
+      "title": "Allocated Volume Mb",
+      "type": "number"
+    },
+    "commitment": {
+      "$ref": "#/$defs/ContactCommitment",
+      "default": "planned"
+    },
+    "contact_id": {
+      "description": "Unique contact ID (prefix: contact_)",
+      "title": "Contact Id",
+      "type": "string"
+    },
+    "cost_usd": {
+      "minimum": 0.0,
+      "title": "Cost Usd",
+      "type": "number"
+    },
+    "pass_id": {
+      "title": "Pass Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contact_id",
+    "pass_id",
+    "allocated_volume_mb",
+    "cost_usd"
+  ],
+  "title": "PlannedAllocation",
+  "type": "object"
+}

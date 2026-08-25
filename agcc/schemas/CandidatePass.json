@@ -1,0 +1,135 @@
+{
+  "$defs": {
+    "PassStatus": {
+      "enum": [
+        "candidate",
+        "eligible",
+        "planned",
+        "committed",
+        "executed",
+        "unused",
+        "cancelled"
+      ],
+      "title": "PassStatus",
+      "type": "string"
+    }
+  },
+  "description": "A geometrically visible satellite-station interval.",
+  "properties": {
+    "azimuth_end_deg": {
+      "exclusiveMaximum": 360.0,
+      "minimum": 0.0,
+      "title": "Azimuth End Deg",
+      "type": "number"
+    },
+    "azimuth_peak_deg": {
+      "exclusiveMaximum": 360.0,
+      "minimum": 0.0,
+      "title": "Azimuth Peak Deg",
+      "type": "number"
+    },
+    "azimuth_start_deg": {
+      "exclusiveMaximum": 360.0,
+      "minimum": 0.0,
+      "title": "Azimuth Start Deg",
+      "type": "number"
+    },
+    "duration_s": {
+      "description": "Total pass duration in seconds",
+      "minimum": 0.0,
+      "title": "Duration S",
+      "type": "number"
+    },
+    "end_at": {
+      "description": "Set time: elevation falls back below threshold (UTC)",
+      "format": "date-time",
+      "title": "End At",
+      "type": "string"
+    },
+    "max_elevation_deg": {
+      "maximum": 90.0,
+      "minimum": 0.0,
+      "title": "Max Elevation Deg",
+      "type": "number"
+    },
+    "minimum_elevation_deg": {
+      "maximum": 90.0,
+      "minimum": 0.0,
+      "title": "Minimum Elevation Deg",
+      "type": "number"
+    },
+    "orbit_model_version": {
+      "title": "Orbit Model Version",
+      "type": "string"
+    },
+    "pass_id": {
+      "description": "Unique pass ID (prefix: pass_); deterministic hash-derived",
+      "title": "Pass Id",
+      "type": "string"
+    },
+    "peak_at": {
+      "description": "Time of maximum elevation (UTC)",
+      "format": "date-time",
+      "title": "Peak At",
+      "type": "string"
+    },
+    "satellite_id": {
+      "title": "Satellite Id",
+      "type": "string"
+    },
+    "scenario_id": {
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "slant_range_peak_km": {
+      "exclusiveMinimum": 0.0,
+      "title": "Slant Range Peak Km",
+      "type": "number"
+    },
+    "start_at": {
+      "description": "Rise time: elevation first crosses threshold (UTC)",
+      "format": "date-time",
+      "title": "Start At",
+      "type": "string"
+    },
+    "station_catalog_version": {
+      "title": "Station Catalog Version",
+      "type": "string"
+    },
+    "station_id": {
+      "title": "Station Id",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/PassStatus",
+      "default": "candidate"
+    },
+    "usable_duration_s": {
+      "description": "Usable duration after setup/teardown subtracted in seconds",
+      "minimum": 0.0,
+      "title": "Usable Duration S",
+      "type": "number"
+    }
+  },
+  "required": [
+    "pass_id",
+    "scenario_id",
+    "satellite_id",
+    "station_id",
+    "start_at",
+    "peak_at",
+    "end_at",
+    "duration_s",
+    "usable_duration_s",
+    "max_elevation_deg",
+    "azimuth_start_deg",
+    "azimuth_peak_deg",
+    "azimuth_end_deg",
+    "slant_range_peak_km",
+    "minimum_elevation_deg",
+    "orbit_model_version",
+    "station_catalog_version"
+  ],
+  "title": "CandidatePass",
+  "type": "object"
+}

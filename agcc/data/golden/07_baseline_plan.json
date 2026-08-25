@@ -1,0 +1,108 @@
+{
+  "algorithm_version": "planner_v1",
+  "contacts": [
+    {
+      "allocated_volume_mb": 175.636167172,
+      "commitment": "planned",
+      "contact_cost_decimal": "130.0",
+      "contact_id": "contact_583c79177cae0569",
+      "duration_s": 145.3125,
+      "end_at": "2026-08-21T00:23:46.406250Z",
+      "pass_id": "pass_52129cffbee47ad3",
+      "reserved_capacity_mb": 175.636167172,
+      "selection_reasons": [
+        "eligible_pass",
+        "hard_constraints_validated",
+        "preference_ranked"
+      ],
+      "start_at": "2026-08-21T00:21:21.093750Z",
+      "station_id": "station_demo_eastasia"
+    },
+    {
+      "allocated_volume_mb": 765.4920638,
+      "commitment": "planned",
+      "contact_cost_decimal": "66.0",
+      "contact_id": "contact_8d07e7bdcee2b8b5",
+      "duration_s": 333.75,
+      "end_at": "2026-08-21T01:27:03.281250Z",
+      "pass_id": "pass_f50c52e94bc9d194",
+      "reserved_capacity_mb": 765.4920638,
+      "selection_reasons": [
+        "eligible_pass",
+        "hard_constraints_validated",
+        "preference_ranked"
+      ],
+      "start_at": "2026-08-21T01:21:29.531250Z",
+      "station_id": "station_demo_southafrica"
+    },
+    {
+      "allocated_volume_mb": 1435.402489015,
+      "commitment": "planned",
+      "contact_cost_decimal": "72.0",
+      "contact_id": "contact_39d3e75a4becc9e0",
+      "duration_s": 454.6875,
+      "end_at": "2026-08-21T01:38:11.718750Z",
+      "pass_id": "pass_9e52752bc8921f34",
+      "reserved_capacity_mb": 1435.402489015,
+      "selection_reasons": [
+        "eligible_pass",
+        "hard_constraints_validated",
+        "preference_ranked"
+      ],
+      "start_at": "2026-08-21T01:30:37.031250Z",
+      "station_id": "station_demo_eastafrica"
+    },
+    {
+      "allocated_volume_mb": 623.469280013,
+      "commitment": "planned",
+      "contact_cost_decimal": "150.0",
+      "contact_id": "contact_eebf068142f8f69f",
+      "duration_s": 300.0,
+      "end_at": "2026-08-21T02:05:34.218750Z",
+      "pass_id": "pass_3218931bb9fd4b85",
+      "reserved_capacity_mb": 643.976312621,
+      "selection_reasons": [
+        "eligible_pass",
+        "hard_constraints_validated",
+        "preference_ranked"
+      ],
+      "start_at": "2026-08-21T02:00:34.218750Z",
+      "station_id": "station_demo_eastasia"
+    }
+  ],
+  "created_at": "2026-08-21T00:00:00Z",
+  "estimated_total_cost": "418.0",
+  "mission_id": "mission_golden01",
+  "parent_plan_id": null,
+  "plan_id": "plan_golden0001",
+  "planned_completion_at": "2026-08-21T02:05:34.218750Z",
+  "planned_volume_mb": 3000.0,
+  "preference": "fastest",
+  "rejected_opportunity_records": [],
+  "required_volume_mb": 3000.0,
+  "scenario_id": "scenario_golden01",
+  "status": "feasible",
+  "unused_opportunity_ids": [
+    "pass_007ade37a9e7f5a1",
+    "pass_0bfa25fd445d188d",
+    "pass_109f11f32da4e903",
+    "pass_20dca9af2b9c50a2",
+    "pass_2c1d78a8fb7a31e5",
+    "pass_37bbe3aee0563c3c",
+    "pass_3cf6fb1354bd4df0",
+    "pass_413fb509e6090eaa",
+    "pass_41e9cb08ff31bbab",
+    "pass_466ac4354c671e52",
+    "pass_4f0ab26cda6fe152",
+    "pass_54818cc25d9f9363",
+    "pass_5f21dda97fffc2cf",
+    "pass_874068cedbe7feee",
+    "pass_8da6d41c7c2a17d8",
+    "pass_a091d3b5e2bd8284",
+    "pass_b00ccf4a7f13cf52",
+    "pass_c54723cfdedeb56c",
+    "pass_edeeb8b11127271c"
+  ],
+  "validation_violations": [],
+  "version": 1
+}

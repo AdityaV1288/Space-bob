@@ -1,0 +1,100 @@
+/* ─── RUNTIME V3 OVERRIDES ───────────────────────────────────────────────── */
+
+/* Station filter button adjustments */
+.station-filters button.active {
+  border-color: var(--border-accent);
+  color: var(--blue-bright);
+  background: var(--blue-subtle);
+  box-shadow: none;
+}
+
+.setup-actions button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Clock controls font fix */
+.clock-controls > b {
+  font: 500 9px var(--font-mono);
+  color: var(--blue);
+  letter-spacing: 0.08em;
+}
+
+.clock-controls button.active {
+  background: var(--blue-subtle);
+  border-color: var(--border-accent);
+  color: var(--blue-bright);
+  box-shadow: none;
+}
+
+/* Dashboard row heights */
+.v2-dashboard {
+  grid-template-rows: minmax(450px, calc(100vh - 340px)) 1fr;
+}
+
+.earth-caption { pointer-events: none; }
+
+/* Anomaly chat improvements */
+.anomaly-chat textarea:focus {
+  border-color: var(--border-accent);
+  box-shadow: 0 0 0 3px var(--blue-glow);
+}
+
+/* Weather panel inside target panel */
+.target-panel .live-weather {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.target-panel .weather-grid {
+  grid-template-columns: 1fr;
+}
+
+.target-panel .weather-grid article {
+  padding: 10px;
+}
+
+/* Pass list route list max height */
+.passes-panel .route-list { max-height: 340px; }
+
+/* Event panel scrollable */
+.event-panel .event-list {
+  min-height: 0;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+/* Station card grid toggle button */
+.catalog-fold {
+  display: block;
+  margin: 14px auto 0;
+  padding: 8px 20px;
+  border: 1px solid var(--border-accent);
+  background: var(--blue-subtle);
+  color: var(--blue-bright);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font: 500 12px var(--font-sans);
+}
+
+.catalog-fold:hover {
+  background: rgba(96, 165, 250, 0.14);
+  box-shadow: 0 0 16px var(--blue-glow);
+}
+
+/* Watson status chip */
+.watson-status {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+}
+
+/* Chat message sizes */
+.chat-history p { font-size: 12px; }
+
+@media (max-width: 640px) {
+  .clock-controls > b { display: none; }
+  .anomaly-chat { grid-template-columns: 1fr; }
+  .station-filters input { min-width: 100%; }
+}

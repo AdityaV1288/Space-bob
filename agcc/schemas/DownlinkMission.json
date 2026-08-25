@@ -1,0 +1,58 @@
+{
+  "$defs": {
+    "MissionStatus": {
+      "enum": [
+        "pending",
+        "in_progress",
+        "complete",
+        "infeasible"
+      ],
+      "title": "MissionStatus",
+      "type": "string"
+    }
+  },
+  "description": "A fixed-volume downlink mission with a hard deadline (Task 09).",
+  "properties": {
+    "deadline_at": {
+      "description": "Hard deadline — data must be downlinked by this time (UTC)",
+      "format": "date-time",
+      "title": "Deadline At",
+      "type": "string"
+    },
+    "mission_id": {
+      "description": "Unique mission ID (prefix: mission_)",
+      "title": "Mission Id",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "release_at": {
+      "description": "Earliest time data may be downlinked (UTC)",
+      "format": "date-time",
+      "title": "Release At",
+      "type": "string"
+    },
+    "required_volume_mb": {
+      "description": "Required data volume in decimal megabytes",
+      "exclusiveMinimum": 0.0,
+      "title": "Required Volume Mb",
+      "type": "number"
+    },
+    "status": {
+      "$ref": "#/$defs/MissionStatus",
+      "default": "pending"
+    }
+  },
+  "required": [
+    "mission_id",
+    "name",
+    "required_volume_mb",
+    "release_at",
+    "deadline_at"
+  ],
+  "title": "DownlinkMission",
+  "type": "object"
+}

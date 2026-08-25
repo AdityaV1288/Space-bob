@@ -1,0 +1,1 @@
+{"schema_version":"golden-scenario.v1","scenario":"B","target_mb":500.0,"first_contact_planned_mb":200.0,"first_contact_delivered_mb":150.0,"future_reserved_spare_mb":50.0,"expected":{"residual_shortfall_mb":0.0,"new_station_proposal":false}}

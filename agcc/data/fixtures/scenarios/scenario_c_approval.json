@@ -1,0 +1,1 @@
+{"schema_version":"golden-scenario.v1","scenario":"C","target_mb":500.0,"predicted_shortfall_mb":50.0,"additional_contact_cost":"20.00","expected":{"before_approval_plan_version":1,"after_approval_plan_version":2,"planned_mb":500.0}}

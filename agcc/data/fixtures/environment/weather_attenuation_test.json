@@ -1,0 +1,33 @@
+{
+  "_comment": "TEST-ONLY weather attenuation lookup table. Factors are placeholder values for unit-testing the lookup logic only. These are NOT approved scientific coefficients.",
+  "version": "test_v1",
+  "entries": [
+    {
+      "freq_min_ghz": 0.0,
+      "freq_max_ghz": 100.0,
+      "rain_min_mm_per_hr": 0.0,
+      "rain_max_mm_per_hr": 0.0,
+      "elev_min_deg": 0.0,
+      "elev_max_deg": 90.0,
+      "factor": 1.0
+    },
+    {
+      "freq_min_ghz": 0.0,
+      "freq_max_ghz": 100.0,
+      "rain_min_mm_per_hr": 0.001,
+      "rain_max_mm_per_hr": 10.0,
+      "elev_min_deg": 0.0,
+      "elev_max_deg": 90.0,
+      "factor": 0.9
+    },
+    {
+      "freq_min_ghz": 0.0,
+      "freq_max_ghz": 100.0,
+      "rain_min_mm_per_hr": 10.001,
+      "rain_max_mm_per_hr": 9999.0,
+      "elev_min_deg": 0.0,
+      "elev_max_deg": 90.0,
+      "factor": 0.5
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "$defs": {
+    "OrbitInputMode": {
+      "enum": [
+        "custom_circular"
+      ],
+      "title": "OrbitInputMode",
+      "type": "string"
+    }
+  },
+  "description": "Canonical circular-LEO orbit representation.",
+  "properties": {
+    "altitude_km": {
+      "description": "Orbital altitude in kilometers (200–2000)",
+      "maximum": 2000.0,
+      "minimum": 200.0,
+      "title": "Altitude Km",
+      "type": "number"
+    },
+    "argument_of_perigee_deg": {
+      "default": 0.0,
+      "title": "Argument Of Perigee Deg",
+      "type": "number"
+    },
+    "direction": {
+      "default": "",
+      "description": "PROGRADE or RETROGRADE (derived)",
+      "title": "Direction",
+      "type": "string"
+    },
+    "earth_radius_km": {
+      "default": 6378.137,
+      "title": "Earth Radius Km",
+      "type": "number"
+    },
+    "eccentricity": {
+      "default": 0.0,
+      "title": "Eccentricity",
+      "type": "number"
+    },
+    "epoch": {
+      "description": "Epoch of orbital elements (UTC)",
+      "format": "date-time",
+      "title": "Epoch",
+      "type": "string"
+    },
+    "inclination_deg": {
+      "description": "Inclination in degrees",
+      "maximum": 180.0,
+      "minimum": 0.0,
+      "title": "Inclination Deg",
+      "type": "number"
+    },
+    "input_mode": {
+      "$ref": "#/$defs/OrbitInputMode",
+      "default": "custom_circular"
+    },
+    "mu_km3_s2": {
+      "default": 398600.4418,
+      "title": "Mu Km3 S2",
+      "type": "number"
+    },
+    "phase_deg": {
+      "description": "Satellite phase (true anomaly) in degrees [0,360)",
+      "exclusiveMaximum": 360.0,
+      "minimum": 0.0,
+      "title": "Phase Deg",
+      "type": "number"
+    },
+    "raan_deg": {
+      "description": "Right ascension of ascending node in degrees [0,360)",
+      "exclusiveMaximum": 360.0,
+      "minimum": 0.0,
+      "title": "Raan Deg",
+      "type": "number"
+    }
+  },
+  "required": [
+    "altitude_km",
+    "inclination_deg",
+    "raan_deg",
+    "phase_deg",
+    "epoch"
+  ],
+  "title": "CustomCircularOrbit",
+  "type": "object"
+}

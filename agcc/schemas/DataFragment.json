@@ -1,0 +1,39 @@
+{
+  "description": "A portion of the mission data volume queued for downlink.",
+  "properties": {
+    "contact_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Contact Id"
+    },
+    "fragment_id": {
+      "description": "Unique fragment ID (prefix: fragment_)",
+      "title": "Fragment Id",
+      "type": "string"
+    },
+    "mission_id": {
+      "title": "Mission Id",
+      "type": "string"
+    },
+    "volume_mb": {
+      "description": "Fragment data volume in decimal MB",
+      "exclusiveMinimum": 0.0,
+      "title": "Volume Mb",
+      "type": "number"
+    }
+  },
+  "required": [
+    "fragment_id",
+    "mission_id",
+    "volume_mb"
+  ],
+  "title": "DataFragment",
+  "type": "object"
+}

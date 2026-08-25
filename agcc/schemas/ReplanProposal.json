@@ -1,0 +1,54 @@
+{
+  "$defs": {
+    "ProposalStatus": {
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "superseded"
+      ],
+      "title": "ProposalStatus",
+      "type": "string"
+    },
+    "SimulationMode": {
+      "enum": [
+        "nominal",
+        "replay"
+      ],
+      "title": "SimulationMode",
+      "type": "string"
+    }
+  },
+  "description": "A proposal to adopt a new plan version; requires human approval.",
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "plan_id": {
+      "title": "Plan Id",
+      "type": "string"
+    },
+    "proposal_id": {
+      "description": "Unique proposal ID (prefix: proposal_)",
+      "title": "Proposal Id",
+      "type": "string"
+    },
+    "simulation_mode": {
+      "$ref": "#/$defs/SimulationMode",
+      "default": "nominal"
+    },
+    "status": {
+      "$ref": "#/$defs/ProposalStatus",
+      "default": "pending"
+    }
+  },
+  "required": [
+    "proposal_id",
+    "plan_id",
+    "created_at"
+  ],
+  "title": "ReplanProposal",
+  "type": "object"
+}

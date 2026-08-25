@@ -1,0 +1,42 @@
+{
+  "description": "Describes changes between two plan versions.",
+  "properties": {
+    "added_contact_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Added Contact Ids",
+      "type": "array"
+    },
+    "from_version": {
+      "minimum": 0,
+      "title": "From Version",
+      "type": "integer"
+    },
+    "modified_contact_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Modified Contact Ids",
+      "type": "array"
+    },
+    "removed_contact_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Removed Contact Ids",
+      "type": "array"
+    },
+    "to_version": {
+      "minimum": 0,
+      "title": "To Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "from_version",
+    "to_version"
+  ],
+  "title": "PlanDiff",
+  "type": "object"
+}

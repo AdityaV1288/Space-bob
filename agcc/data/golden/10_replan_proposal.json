@@ -1,0 +1,9 @@
+{
+  "created_at": "2026-08-21T00:00:00Z",
+  "current_plan_id": "plan_golden0001",
+  "proposal_id": "proposal_e1905eff7fb88903",
+  "proposed_plan_id": "plan_fde3a067e33ab136",
+  "reason": "Golden station-outage recovery",
+  "scenario_id": "scenario_golden01",
+  "status": "pending"
+}

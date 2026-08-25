@@ -1,0 +1,83 @@
+{
+  "fixed_random_seed": 14014,
+  "request": {
+    "mission": {
+      "deadline_at": "2026-08-22T00:00:00Z",
+      "mission_id": "mission_golden01",
+      "name": "Golden 3000 MB downlink",
+      "release_at": "2026-08-21T00:00:00Z",
+      "required_volume_mb": 3000.0,
+      "status": "pending"
+    },
+    "satellite": {
+      "comms": {
+        "band": "X",
+        "carrier_frequency_ghz": 9.6,
+        "max_downlink_rate_mbps": 100.0,
+        "min_elevation_deg": 5.0,
+        "polarization": "circular",
+        "protocol_efficiency": 0.9
+      },
+      "name": "Golden circular LEO",
+      "orbit": {
+        "altitude_km": 550.0,
+        "argument_of_perigee_deg": 0.0,
+        "direction": "PROGRADE",
+        "earth_radius_km": 6378.137,
+        "eccentricity": 0.0,
+        "epoch": "2026-08-21T00:00:00Z",
+        "inclination_deg": 53.0,
+        "input_mode": "custom_circular",
+        "mu_km3_s2": 398600.4418,
+        "phase_deg": 10.0,
+        "raan_deg": 20.0
+      },
+      "provenance": {
+        "assumption_fields": [
+          "communications",
+          "orbit"
+        ],
+        "fetched_at": "2026-08-21T00:00:00Z",
+        "observed_at": null,
+        "source_name": "AGCC Task 14 golden fixture",
+        "source_type": "fixture",
+        "source_uri": null,
+        "source_version": "1"
+      },
+      "satellite_id": "sat_golden01"
+    },
+    "scenario": {
+      "constraints": {
+        "allow_additional_contact_proposals": true,
+        "currency": "USD",
+        "maximum_budget": "100000",
+        "planning_preference": "fastest",
+        "station_selection": {
+          "allow_all_eligible": false,
+          "authorized_provider_ids": [],
+          "authorized_station_ids": [
+            "station_demo_eastafrica",
+            "station_demo_eastasia",
+            "station_demo_southafrica",
+            "station_demo_southamerica"
+          ],
+          "excluded_station_ids": []
+        }
+      },
+      "mission_id": "mission_golden01",
+      "name": "AGCC golden verification scenario",
+      "satellite_id": "sat_golden01",
+      "scenario_id": "scenario_golden01",
+      "station_ids": [
+        "station_demo_eastafrica",
+        "station_demo_eastasia",
+        "station_demo_southafrica",
+        "station_demo_southamerica"
+      ]
+    }
+  },
+  "validation": {
+    "errors": [],
+    "valid": true
+  }
+}

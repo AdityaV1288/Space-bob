@@ -1,0 +1,2287 @@
+{
+  "_comment": "AGCC Hybrid Catalog. 105 Hardcoded (Commercial/Gov) + 0 Live Premium SatNOGS.",
+  "stations": [
+    {
+      "id": "station_aws_ground_000_141b",
+      "name": "AWS US-East (Ohio)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": 40.0,
+        "longitude_deg": -83.0,
+        "elevation_m": 257.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 400.3,
+      "cost_per_minute_usd": 12.6,
+      "reliability_score": 0.998,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_001_eade",
+      "name": "AWS US-West (Oregon)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": 45.8,
+        "longitude_deg": -119.3,
+        "elevation_m": 78.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 270.8,
+      "cost_per_minute_usd": 9.3,
+      "reliability_score": 0.998,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_002_e6b2",
+      "name": "AWS Hawaii",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": 19.0,
+        "longitude_deg": -155.6,
+        "elevation_m": 218.2
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 454.4,
+      "cost_per_minute_usd": 12.5,
+      "reliability_score": 0.994,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_003_fb47",
+      "name": "AWS EU (Ireland)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": 53.3,
+        "longitude_deg": -6.2,
+        "elevation_m": 154.4
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 318.7,
+      "cost_per_minute_usd": 9.5,
+      "reliability_score": 0.998,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_004_b11b",
+      "name": "AWS EU (Stockholm)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": 59.3,
+        "longitude_deg": 18.0,
+        "elevation_m": 158.8
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 466.6,
+      "cost_per_minute_usd": 12.9,
+      "reliability_score": 0.995,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_005_8f7e",
+      "name": "AWS ME (Bahrain)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": 26.2,
+        "longitude_deg": 50.5,
+        "elevation_m": 111.4
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 346.1,
+      "cost_per_minute_usd": 13.1,
+      "reliability_score": 0.991,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_006_0285",
+      "name": "AWS AP (Sydney)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": -33.8,
+        "longitude_deg": 151.2,
+        "elevation_m": 186.2
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 328.8,
+      "cost_per_minute_usd": 10.0,
+      "reliability_score": 0.992,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_007_6ae7",
+      "name": "AWS AP (Seoul)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": 37.5,
+        "longitude_deg": 126.9,
+        "elevation_m": 168.2
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 395.2,
+      "cost_per_minute_usd": 10.8,
+      "reliability_score": 0.99,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_008_771f",
+      "name": "AWS AP (Singapore)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": 1.3,
+        "longitude_deg": 103.8,
+        "elevation_m": 257.0
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 252.8,
+      "cost_per_minute_usd": 13.6,
+      "reliability_score": 0.995,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_009_5ffc",
+      "name": "AWS AF (Cape Town)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": -33.9,
+        "longitude_deg": 18.4,
+        "elevation_m": 395.6
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 432.2,
+      "cost_per_minute_usd": 10.4,
+      "reliability_score": 0.992,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_aws_ground_010_c7c9",
+      "name": "AWS SA (Punta Arenas)",
+      "provider_id": "aws_ground",
+      "location": {
+        "latitude_deg": -53.1,
+        "longitude_deg": -70.9,
+        "elevation_m": 64.8
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 292.4,
+      "cost_per_minute_usd": 9.9,
+      "reliability_score": 0.992,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_011_64f3",
+      "name": "KSAT Svalbard",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": 78.2,
+        "longitude_deg": 15.4,
+        "elevation_m": 448.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 481.5,
+      "cost_per_minute_usd": 11.7,
+      "reliability_score": 0.993,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_012_4e29",
+      "name": "KSAT Tromsø",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": 69.6,
+        "longitude_deg": 18.9,
+        "elevation_m": 325.1
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 432.2,
+      "cost_per_minute_usd": 11.2,
+      "reliability_score": 0.991,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_013_bce4",
+      "name": "KSAT Grimstad",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": 58.3,
+        "longitude_deg": 8.6,
+        "elevation_m": 487.9
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 362.9,
+      "cost_per_minute_usd": 14.8,
+      "reliability_score": 0.991,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_014_66af",
+      "name": "KSAT Troll (Antarctica)",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": -72.0,
+        "longitude_deg": 2.5,
+        "elevation_m": 307.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 422.7,
+      "cost_per_minute_usd": 14.2,
+      "reliability_score": 0.993,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_015_613a",
+      "name": "KSAT Inuvik",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": 68.3,
+        "longitude_deg": -133.5,
+        "elevation_m": 464.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 494.4,
+      "cost_per_minute_usd": 13.1,
+      "reliability_score": 0.996,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_016_1bf4",
+      "name": "KSAT Punta Arenas",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": -53.1,
+        "longitude_deg": -70.9,
+        "elevation_m": 206.2
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 452.3,
+      "cost_per_minute_usd": 12.5,
+      "reliability_score": 0.996,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_017_cbfd",
+      "name": "KSAT Athens",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": 38.0,
+        "longitude_deg": 23.7,
+        "elevation_m": 147.8
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 367.2,
+      "cost_per_minute_usd": 10.8,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_018_da1f",
+      "name": "KSAT Dubai",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": 25.2,
+        "longitude_deg": 55.2,
+        "elevation_m": 72.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 389.9,
+      "cost_per_minute_usd": 12.9,
+      "reliability_score": 0.991,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_019_c092",
+      "name": "KSAT Hartebeesthoek",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": -25.8,
+        "longitude_deg": 27.7,
+        "elevation_m": 43.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 494.7,
+      "cost_per_minute_usd": 14.0,
+      "reliability_score": 0.998,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_020_ce6c",
+      "name": "KSAT Mauritius",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": -20.3,
+        "longitude_deg": 57.5,
+        "elevation_m": 10.7
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 493.7,
+      "cost_per_minute_usd": 10.4,
+      "reliability_score": 0.993,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_021_1d85",
+      "name": "KSAT Singapore",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": 1.3,
+        "longitude_deg": 103.8,
+        "elevation_m": 485.5
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 355.6,
+      "cost_per_minute_usd": 13.8,
+      "reliability_score": 0.994,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_022_d436",
+      "name": "KSAT Alice Springs",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": -23.7,
+        "longitude_deg": 133.8,
+        "elevation_m": 108.7
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 384.9,
+      "cost_per_minute_usd": 12.5,
+      "reliability_score": 0.992,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_023_157f",
+      "name": "KSAT Hawaii",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": 19.0,
+        "longitude_deg": -155.6,
+        "elevation_m": 37.9
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 347.2,
+      "cost_per_minute_usd": 13.7,
+      "reliability_score": 0.998,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_024_a478",
+      "name": "KSAT Córdoba",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": -31.4,
+        "longitude_deg": -64.2,
+        "elevation_m": 71.8
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 422.4,
+      "cost_per_minute_usd": 12.4,
+      "reliability_score": 0.997,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_ksat_025_f8d3",
+      "name": "KSAT Maspalomas",
+      "provider_id": "ksat",
+      "location": {
+        "latitude_deg": 27.8,
+        "longitude_deg": -15.6,
+        "elevation_m": 157.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 387.6,
+      "cost_per_minute_usd": 11.6,
+      "reliability_score": 0.991,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_leaf_space_026_6a55",
+      "name": "Leaf Space Svalbard",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 78.22,
+        "longitude_deg": 15.62,
+        "elevation_m": 277.0
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 129.4,
+      "cost_per_minute_usd": 5.9,
+      "reliability_score": 0.973,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_027_a241",
+      "name": "Leaf Space Iceland",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 64.1,
+        "longitude_deg": -21.9,
+        "elevation_m": 402.0
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 161.4,
+      "cost_per_minute_usd": 5.2,
+      "reliability_score": 0.976,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_028_df92",
+      "name": "Leaf Space Awarua",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": -46.5,
+        "longitude_deg": 168.3,
+        "elevation_m": 25.2
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 164.9,
+      "cost_per_minute_usd": 7.4,
+      "reliability_score": 0.974,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_029_af1e",
+      "name": "Leaf Space Azores",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 38.7,
+        "longitude_deg": -27.0,
+        "elevation_m": 307.8
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 113.5,
+      "cost_per_minute_usd": 5.2,
+      "reliability_score": 0.971,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_030_e2b3",
+      "name": "Leaf Space Sri Lanka",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 6.9,
+        "longitude_deg": 79.8,
+        "elevation_m": 457.9
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 171.5,
+      "cost_per_minute_usd": 7.1,
+      "reliability_score": 0.98,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_031_9c8f",
+      "name": "Leaf Space Lomazzo",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 45.7,
+        "longitude_deg": 9.0,
+        "elevation_m": 476.4
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 167.3,
+      "cost_per_minute_usd": 6.8,
+      "reliability_score": 0.978,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_032_bff1",
+      "name": "Leaf Space Puertollano",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 38.6,
+        "longitude_deg": -4.1,
+        "elevation_m": 288.1
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 169.2,
+      "cost_per_minute_usd": 5.3,
+      "reliability_score": 0.976,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_033_ab42",
+      "name": "Leaf Space Yatharagga",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": -29.0,
+        "longitude_deg": 115.3,
+        "elevation_m": 113.9
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 146.1,
+      "cost_per_minute_usd": 8.0,
+      "reliability_score": 0.979,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_034_ccf2",
+      "name": "Leaf Space Dundee",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 56.4,
+        "longitude_deg": -2.9,
+        "elevation_m": 363.9
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 137.2,
+      "cost_per_minute_usd": 5.2,
+      "reliability_score": 0.983,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_035_9844",
+      "name": "Leaf Space Magaliesburg",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": -25.9,
+        "longitude_deg": 27.5,
+        "elevation_m": 221.4
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 134.1,
+      "cost_per_minute_usd": 4.4,
+      "reliability_score": 0.989,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_036_e937",
+      "name": "Leaf Space Cork",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 51.9,
+        "longitude_deg": -8.5,
+        "elevation_m": 296.2
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 100.6,
+      "cost_per_minute_usd": 4.7,
+      "reliability_score": 0.978,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_037_db81",
+      "name": "Leaf Space Inuvik",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 68.3,
+        "longitude_deg": -133.5,
+        "elevation_m": 60.0
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 155.3,
+      "cost_per_minute_usd": 5.1,
+      "reliability_score": 0.979,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_leaf_space_038_413e",
+      "name": "Leaf Space Panama",
+      "provider_id": "leaf_space",
+      "location": {
+        "latitude_deg": 9.0,
+        "longitude_deg": -79.5,
+        "elevation_m": 230.3
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 169.6,
+      "cost_per_minute_usd": 7.4,
+      "reliability_score": 0.988,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_ssc_039_fa04",
+      "name": "SSC Esrange (Kiruna)",
+      "provider_id": "ssc",
+      "location": {
+        "latitude_deg": 67.8,
+        "longitude_deg": 21.0,
+        "elevation_m": 289.7
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 177.8,
+      "cost_per_minute_usd": 7.9,
+      "reliability_score": 0.973,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_ssc_040_35de",
+      "name": "SSC Inuvik",
+      "provider_id": "ssc",
+      "location": {
+        "latitude_deg": 68.3,
+        "longitude_deg": -133.5,
+        "elevation_m": 379.2
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 183.9,
+      "cost_per_minute_usd": 6.7,
+      "reliability_score": 0.985,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_ssc_041_5b0b",
+      "name": "SSC Clewiston",
+      "provider_id": "ssc",
+      "location": {
+        "latitude_deg": 26.7,
+        "longitude_deg": -80.9,
+        "elevation_m": 473.1
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 169.9,
+      "cost_per_minute_usd": 4.3,
+      "reliability_score": 0.972,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_ssc_042_3006",
+      "name": "SSC Santiago",
+      "provider_id": "ssc",
+      "location": {
+        "latitude_deg": -33.4,
+        "longitude_deg": -70.6,
+        "elevation_m": 132.1
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 150.0,
+      "cost_per_minute_usd": 4.0,
+      "reliability_score": 0.975,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_ssc_043_67a4",
+      "name": "SSC Yatharagga",
+      "provider_id": "ssc",
+      "location": {
+        "latitude_deg": -29.0,
+        "longitude_deg": 115.3,
+        "elevation_m": 276.3
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 109.9,
+      "cost_per_minute_usd": 6.0,
+      "reliability_score": 0.986,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_ssc_044_6821",
+      "name": "SSC Punta Arenas",
+      "provider_id": "ssc",
+      "location": {
+        "latitude_deg": -53.1,
+        "longitude_deg": -70.9,
+        "elevation_m": 474.6
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 171.5,
+      "cost_per_minute_usd": 6.6,
+      "reliability_score": 0.98,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_ssc_045_d3c9",
+      "name": "SSC South Point",
+      "provider_id": "ssc",
+      "location": {
+        "latitude_deg": 19.0,
+        "longitude_deg": -155.6,
+        "elevation_m": 36.1
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 188.9,
+      "cost_per_minute_usd": 4.1,
+      "reliability_score": 0.974,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_ssc_046_902d",
+      "name": "SSC WASC (Australia)",
+      "provider_id": "ssc",
+      "location": {
+        "latitude_deg": -29.0,
+        "longitude_deg": 115.3,
+        "elevation_m": 227.3
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 132.2,
+      "cost_per_minute_usd": 7.7,
+      "reliability_score": 0.98,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_ssc_047_ccca",
+      "name": "SSC Bangkok",
+      "provider_id": "ssc",
+      "location": {
+        "latitude_deg": 13.7,
+        "longitude_deg": 100.5,
+        "elevation_m": 249.0
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 154.5,
+      "cost_per_minute_usd": 6.9,
+      "reliability_score": 0.971,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_atlas_space_048_7e83",
+      "name": "Atlas Traverse City",
+      "provider_id": "atlas_space",
+      "location": {
+        "latitude_deg": 44.7,
+        "longitude_deg": -85.6,
+        "elevation_m": 297.0
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 182.9,
+      "cost_per_minute_usd": 4.2,
+      "reliability_score": 0.976,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_atlas_space_049_b3d1",
+      "name": "Atlas Brewster",
+      "provider_id": "atlas_space",
+      "location": {
+        "latitude_deg": 48.1,
+        "longitude_deg": -119.6,
+        "elevation_m": 114.4
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 132.1,
+      "cost_per_minute_usd": 7.6,
+      "reliability_score": 0.977,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_atlas_space_050_362e",
+      "name": "Atlas Guam",
+      "provider_id": "atlas_space",
+      "location": {
+        "latitude_deg": 13.4,
+        "longitude_deg": 144.7,
+        "elevation_m": 380.3
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 156.0,
+      "cost_per_minute_usd": 5.7,
+      "reliability_score": 0.973,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_atlas_space_051_7136",
+      "name": "Atlas Tahiti",
+      "provider_id": "atlas_space",
+      "location": {
+        "latitude_deg": -17.6,
+        "longitude_deg": -149.4,
+        "elevation_m": 467.3
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 144.1,
+      "cost_per_minute_usd": 7.4,
+      "reliability_score": 0.973,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_atlas_space_052_10a5",
+      "name": "Atlas Chitose",
+      "provider_id": "atlas_space",
+      "location": {
+        "latitude_deg": 42.8,
+        "longitude_deg": 141.6,
+        "elevation_m": 371.4
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 151.7,
+      "cost_per_minute_usd": 6.1,
+      "reliability_score": 0.98,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_atlas_space_053_ff65",
+      "name": "Atlas Harmon",
+      "provider_id": "atlas_space",
+      "location": {
+        "latitude_deg": 44.8,
+        "longitude_deg": -68.8,
+        "elevation_m": 74.7
+      },
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_data_rate_mbps": 148.8,
+      "cost_per_minute_usd": 5.1,
+      "reliability_score": 0.976,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_viasat_rte_054_0a9f",
+      "name": "Viasat RTE Alice Springs",
+      "provider_id": "viasat_rte",
+      "location": {
+        "latitude_deg": -23.7,
+        "longitude_deg": 133.8,
+        "elevation_m": 79.6
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 275.4,
+      "cost_per_minute_usd": 12.2,
+      "reliability_score": 0.993,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_viasat_rte_055_7a1a",
+      "name": "Viasat RTE Buenos Aires",
+      "provider_id": "viasat_rte",
+      "location": {
+        "latitude_deg": -34.6,
+        "longitude_deg": -58.4,
+        "elevation_m": 248.8
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 307.5,
+      "cost_per_minute_usd": 10.2,
+      "reliability_score": 0.995,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_viasat_rte_056_9a59",
+      "name": "Viasat RTE UK",
+      "provider_id": "viasat_rte",
+      "location": {
+        "latitude_deg": 51.5,
+        "longitude_deg": -0.1,
+        "elevation_m": 348.8
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 421.9,
+      "cost_per_minute_usd": 15.0,
+      "reliability_score": 0.994,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_viasat_rte_057_cebe",
+      "name": "Viasat RTE Ghana",
+      "provider_id": "viasat_rte",
+      "location": {
+        "latitude_deg": 5.6,
+        "longitude_deg": -0.2,
+        "elevation_m": 99.8
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 466.1,
+      "cost_per_minute_usd": 11.7,
+      "reliability_score": 0.991,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_viasat_rte_058_a660",
+      "name": "Viasat RTE Hawaii",
+      "provider_id": "viasat_rte",
+      "location": {
+        "latitude_deg": 19.0,
+        "longitude_deg": -155.6,
+        "elevation_m": 433.1
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 276.4,
+      "cost_per_minute_usd": 12.2,
+      "reliability_score": 0.998,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_viasat_rte_059_4ca3",
+      "name": "Viasat RTE Georgia",
+      "provider_id": "viasat_rte",
+      "location": {
+        "latitude_deg": 33.7,
+        "longitude_deg": -84.3,
+        "elevation_m": 467.0
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 490.4,
+      "cost_per_minute_usd": 12.0,
+      "reliability_score": 0.998,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_nasa_gov_060_b73c",
+      "name": "NASA DSN Goldstone",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": 35.4,
+        "longitude_deg": -116.8,
+        "elevation_m": 430.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 463.1,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_nasa_gov_061_c649",
+      "name": "NASA DSN Madrid",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": 40.4,
+        "longitude_deg": -4.2,
+        "elevation_m": 431.7
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 516.9,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_nasa_gov_062_053d",
+      "name": "NASA DSN Canberra",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": -35.4,
+        "longitude_deg": 148.9,
+        "elevation_m": 211.9
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 590.4,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_nasa_gov_063_b0fc",
+      "name": "NASA Wallops (WFF)",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": 37.9,
+        "longitude_deg": -75.4,
+        "elevation_m": 183.7
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 363.1,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_nasa_gov_064_6eb8",
+      "name": "NASA White Sands",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": 32.5,
+        "longitude_deg": -106.6,
+        "elevation_m": 181.6
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 563.8,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_nasa_gov_065_a648",
+      "name": "NASA Fairbanks (ASF)",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": 64.8,
+        "longitude_deg": -147.8,
+        "elevation_m": 434.5
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 344.1,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_nasa_gov_066_92c8",
+      "name": "NASA Kennedy Space Center",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": 28.5,
+        "longitude_deg": -80.6,
+        "elevation_m": 160.0
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 502.7,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_nasa_gov_067_9509",
+      "name": "NASA McMurdo (Antarctica)",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": -77.8,
+        "longitude_deg": 166.6,
+        "elevation_m": 249.4
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 522.4,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_nasa_gov_068_df10",
+      "name": "NASA Guam",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": 13.4,
+        "longitude_deg": 144.7,
+        "elevation_m": 221.5
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 395.9,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_nasa_gov_069_62e7",
+      "name": "NASA Bermuda",
+      "provider_id": "nasa_gov",
+      "location": {
+        "latitude_deg": 32.3,
+        "longitude_deg": -64.7,
+        "elevation_m": 70.6
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 340.9,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 2
+    },
+    {
+      "id": "station_esa_gov_070_74d3",
+      "name": "ESA Cebreros",
+      "provider_id": "esa_gov",
+      "location": {
+        "latitude_deg": 40.4,
+        "longitude_deg": -4.3,
+        "elevation_m": 437.5
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 554.4,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_esa_gov_071_6bcc",
+      "name": "ESA New Norcia",
+      "provider_id": "esa_gov",
+      "location": {
+        "latitude_deg": -31.0,
+        "longitude_deg": 116.1,
+        "elevation_m": 490.6
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 598.4,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_esa_gov_072_6c13",
+      "name": "ESA Malargüe",
+      "provider_id": "esa_gov",
+      "location": {
+        "latitude_deg": -35.7,
+        "longitude_deg": -69.3,
+        "elevation_m": 204.9
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 477.8,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_esa_gov_073_7cbb",
+      "name": "ESA Kourou",
+      "provider_id": "esa_gov",
+      "location": {
+        "latitude_deg": 5.2,
+        "longitude_deg": -52.8,
+        "elevation_m": 344.4
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 599.5,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_esa_gov_074_2732",
+      "name": "ESA Kiruna",
+      "provider_id": "esa_gov",
+      "location": {
+        "latitude_deg": 67.8,
+        "longitude_deg": 20.9,
+        "elevation_m": 219.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 507.6,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_esa_gov_075_62f9",
+      "name": "ESA Redu",
+      "provider_id": "esa_gov",
+      "location": {
+        "latitude_deg": 50.0,
+        "longitude_deg": 5.1,
+        "elevation_m": 162.1
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 421.9,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_esa_gov_076_6486",
+      "name": "ESA Santa Maria",
+      "provider_id": "esa_gov",
+      "location": {
+        "latitude_deg": 36.9,
+        "longitude_deg": -25.1,
+        "elevation_m": 180.9
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 519.9,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_esa_gov_077_e336",
+      "name": "ESA Villafranca",
+      "provider_id": "esa_gov",
+      "location": {
+        "latitude_deg": 40.4,
+        "longitude_deg": -3.9,
+        "elevation_m": 208.2
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 527.8,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_078_f7f1",
+      "name": "ISRO Bengaluru",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": 12.9,
+        "longitude_deg": 77.5,
+        "elevation_m": 261.0
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 406.8,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_079_529c",
+      "name": "ISRO Sriharikota",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": 13.7,
+        "longitude_deg": 80.2,
+        "elevation_m": 47.4
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 531.3,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_080_ff4d",
+      "name": "ISRO Port Blair",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": 11.6,
+        "longitude_deg": 92.7,
+        "elevation_m": 68.8
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 477.2,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_081_e001",
+      "name": "ISRO Thiruvananthapuram",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": 8.5,
+        "longitude_deg": 76.9,
+        "elevation_m": 381.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 419.2,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_082_d0ab",
+      "name": "ISRO Lucknow",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": 26.8,
+        "longitude_deg": 80.9,
+        "elevation_m": 240.7
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 537.6,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_083_eb6d",
+      "name": "ISRO Shadnagar",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": 17.0,
+        "longitude_deg": 78.1,
+        "elevation_m": 115.2
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 536.3,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_084_ff9a",
+      "name": "ISRO Hassan",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": 13.0,
+        "longitude_deg": 76.1,
+        "elevation_m": 369.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 387.0,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_085_ff2b",
+      "name": "ISRO Bhopal",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": 23.2,
+        "longitude_deg": 77.4,
+        "elevation_m": 181.8
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 525.7,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_086_48cb",
+      "name": "ISRO Mauritius",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": -20.3,
+        "longitude_deg": 57.5,
+        "elevation_m": 396.5
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 322.5,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_087_8622",
+      "name": "ISRO Brunei",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": 4.5,
+        "longitude_deg": 114.7,
+        "elevation_m": 28.6
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 427.5,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_088_73f8",
+      "name": "ISRO Biak",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": -1.1,
+        "longitude_deg": 136.0,
+        "elevation_m": 35.7
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 577.3,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_isro_gov_089_5928",
+      "name": "ISRO Bharati Station",
+      "provider_id": "isro_gov",
+      "location": {
+        "latitude_deg": -69.4,
+        "longitude_deg": 76.1,
+        "elevation_m": 367.1
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 525.4,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_jaxa_gov_090_106b",
+      "name": "JAXA Tsukuba",
+      "provider_id": "jaxa_gov",
+      "location": {
+        "latitude_deg": 36.0,
+        "longitude_deg": 140.1,
+        "elevation_m": 387.0
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 330.3,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_jaxa_gov_091_bcb4",
+      "name": "JAXA Katsuura",
+      "provider_id": "jaxa_gov",
+      "location": {
+        "latitude_deg": 35.1,
+        "longitude_deg": 140.3,
+        "elevation_m": 321.1
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 479.9,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_jaxa_gov_092_00a3",
+      "name": "JAXA Masuda",
+      "provider_id": "jaxa_gov",
+      "location": {
+        "latitude_deg": 30.5,
+        "longitude_deg": 131.0,
+        "elevation_m": 64.0
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 496.0,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_jaxa_gov_093_b88c",
+      "name": "JAXA Okinawa",
+      "provider_id": "jaxa_gov",
+      "location": {
+        "latitude_deg": 26.5,
+        "longitude_deg": 127.8,
+        "elevation_m": 353.0
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 499.6,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_jaxa_gov_094_03db",
+      "name": "JAXA Uchinoura",
+      "provider_id": "jaxa_gov",
+      "location": {
+        "latitude_deg": 31.2,
+        "longitude_deg": 131.0,
+        "elevation_m": 15.4
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 514.2,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_cnes_gov_095_5686",
+      "name": "CNES Toulouse",
+      "provider_id": "cnes_gov",
+      "location": {
+        "latitude_deg": 43.5,
+        "longitude_deg": 1.4,
+        "elevation_m": 36.6
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 452.6,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_cnes_gov_096_53a2",
+      "name": "CNES Aussaguel",
+      "provider_id": "cnes_gov",
+      "location": {
+        "latitude_deg": 43.5,
+        "longitude_deg": 1.5,
+        "elevation_m": 11.2
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 305.8,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_cnes_gov_097_8b0c",
+      "name": "CNES Kourou",
+      "provider_id": "cnes_gov",
+      "location": {
+        "latitude_deg": 5.2,
+        "longitude_deg": -52.8,
+        "elevation_m": 432.0
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 571.0,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_cnes_gov_098_5de6",
+      "name": "CNES Hartebeesthoek",
+      "provider_id": "cnes_gov",
+      "location": {
+        "latitude_deg": -25.8,
+        "longitude_deg": 27.7,
+        "elevation_m": 457.9
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 380.3,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_cnes_gov_099_d540",
+      "name": "CNES Kerguelen",
+      "provider_id": "cnes_gov",
+      "location": {
+        "latitude_deg": -49.3,
+        "longitude_deg": 70.2,
+        "elevation_m": 138.7
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 394.2,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_cnes_gov_100_81ef",
+      "name": "CNES Papeete",
+      "provider_id": "cnes_gov",
+      "location": {
+        "latitude_deg": -17.5,
+        "longitude_deg": -149.5,
+        "elevation_m": 58.0
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 548.2,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_cnes_gov_101_ab0f",
+      "name": "CNES N'Koltang",
+      "provider_id": "cnes_gov",
+      "location": {
+        "latitude_deg": 0.3,
+        "longitude_deg": 9.6,
+        "elevation_m": 17.3
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 449.7,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_dlr_gov_102_eb53",
+      "name": "DLR Weilheim",
+      "provider_id": "dlr_gov",
+      "location": {
+        "latitude_deg": 47.8,
+        "longitude_deg": 11.1,
+        "elevation_m": 203.2
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 444.1,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_dlr_gov_103_5d3b",
+      "name": "DLR Neustrelitz",
+      "provider_id": "dlr_gov",
+      "location": {
+        "latitude_deg": 53.3,
+        "longitude_deg": 13.0,
+        "elevation_m": 84.6
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 450.4,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    },
+    {
+      "id": "station_dlr_gov_104_b7c5",
+      "name": "DLR GARS O'Higgins",
+      "provider_id": "dlr_gov",
+      "location": {
+        "latitude_deg": -63.3,
+        "longitude_deg": -57.9,
+        "elevation_m": 384.9
+      },
+      "supported_bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "max_data_rate_mbps": 450.5,
+      "cost_per_minute_usd": 0.0,
+      "reliability_score": 0.999,
+      "minimum_elevation_deg": 5.0,
+      "setup_s": 45,
+      "teardown_s": 30,
+      "simultaneous_contacts": 1
+    }
+  ]
+}

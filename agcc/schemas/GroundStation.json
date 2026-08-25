@@ -1,0 +1,186 @@
+{
+  "$defs": {
+    "Band": {
+      "enum": [
+        "S",
+        "X",
+        "Ka",
+        "UHF",
+        "VHF"
+      ],
+      "title": "Band",
+      "type": "string"
+    },
+    "CostModel": {
+      "enum": [
+        "none",
+        "per_minute",
+        "per_contact_plus_minute"
+      ],
+      "title": "CostModel",
+      "type": "string"
+    },
+    "FieldProvenance": {
+      "description": "Field-level provenance: maps field names to source/assumption notes.",
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "sources": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Sources",
+          "type": "object"
+        }
+      },
+      "title": "FieldProvenance",
+      "type": "object"
+    }
+  },
+  "description": "A ground station capable of receiving satellite downlink.",
+  "properties": {
+    "altitude_m": {
+      "description": "Altitude above WGS-84 ellipsoid in meters",
+      "minimum": 0.0,
+      "title": "Altitude M",
+      "type": "number"
+    },
+    "booking_cost": {
+      "description": "Fixed per-contact booking cost",
+      "minimum": 0.0,
+      "title": "Booking Cost",
+      "type": "number"
+    },
+    "cost_model": {
+      "$ref": "#/$defs/CostModel",
+      "default": "none"
+    },
+    "cost_per_minute": {
+      "description": "Variable cost per contact minute",
+      "minimum": 0.0,
+      "title": "Cost Per Minute",
+      "type": "number"
+    },
+    "currency": {
+      "default": "USD",
+      "minLength": 1,
+      "title": "Currency",
+      "type": "string"
+    },
+    "enabled": {
+      "default": true,
+      "title": "Enabled",
+      "type": "boolean"
+    },
+    "field_provenance": {
+      "$ref": "#/$defs/FieldProvenance"
+    },
+    "latitude_deg": {
+      "description": "Geodetic latitude in degrees",
+      "maximum": 90.0,
+      "minimum": -90.0,
+      "title": "Latitude Deg",
+      "type": "number"
+    },
+    "longitude_deg": {
+      "description": "Geodetic longitude in degrees",
+      "exclusiveMaximum": 180.0,
+      "minimum": -180.0,
+      "title": "Longitude Deg",
+      "type": "number"
+    },
+    "max_downlink_rate_mbps": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Station maximum downlink rate in Mbit/s",
+      "title": "Max Downlink Rate Mbps"
+    },
+    "minimum_elevation_deg": {
+      "description": "Station minimum elevation mask in degrees",
+      "maximum": 90.0,
+      "minimum": 0.0,
+      "title": "Minimum Elevation Deg",
+      "type": "number"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "provider_id": {
+      "description": "Identifier of the station provider",
+      "minLength": 1,
+      "title": "Provider Id",
+      "type": "string"
+    },
+    "setup_s": {
+      "description": "Setup time in seconds before contact",
+      "minimum": 0,
+      "title": "Setup S",
+      "type": "integer"
+    },
+    "simultaneous_contacts": {
+      "default": 1,
+      "description": "Fixed at 1 for MVP",
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Simultaneous Contacts",
+      "type": "integer"
+    },
+    "station_id": {
+      "description": "Unique station ID (prefix: station_)",
+      "title": "Station Id",
+      "type": "string"
+    },
+    "supported_bands": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Band"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Supported Bands"
+    },
+    "teardown_s": {
+      "description": "Teardown time in seconds after contact",
+      "minimum": 0,
+      "title": "Teardown S",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "station_id",
+    "name",
+    "provider_id",
+    "latitude_deg",
+    "longitude_deg",
+    "altitude_m",
+    "minimum_elevation_deg",
+    "setup_s",
+    "teardown_s",
+    "booking_cost",
+    "cost_per_minute"
+  ],
+  "title": "GroundStation",
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+/* ─── MISSION CONTROLS OVERRIDES ─────────────────────────────────────────── */
+/* All base styles now in v2.css. This file only adds specifics. */
+
+/* Remove old purple tint from branch banner – v2.css handles it */
+
+/* Live lock badge */
+.live-lock {
+  padding: 5px 10px;
+  border: 1px solid var(--border-cyan);
+  background: var(--cyan-subtle);
+  color: var(--cyan) !important;
+  border-radius: var(--radius-sm);
+  font: 600 9px var(--font-mono) !important;
+  letter-spacing: 0.07em;
+}

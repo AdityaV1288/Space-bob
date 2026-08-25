@@ -1,0 +1,53 @@
+{
+  "$defs": {
+    "RejectionCode": {
+      "enum": [
+        "budget_exceeded",
+        "deadline_missed",
+        "incompatible_band",
+        "station_unavailable",
+        "below_elevation",
+        "infeasible",
+        "policy"
+      ],
+      "title": "RejectionCode",
+      "type": "string"
+    }
+  },
+  "description": "Outcome of a feasibility check against hard constraints.",
+  "properties": {
+    "is_feasible": {
+      "title": "Is Feasible",
+      "type": "boolean"
+    },
+    "message": {
+      "default": "",
+      "title": "Message",
+      "type": "string"
+    },
+    "planned_cost_usd": {
+      "minimum": 0.0,
+      "title": "Planned Cost Usd",
+      "type": "number"
+    },
+    "planned_volume_mb": {
+      "minimum": 0.0,
+      "title": "Planned Volume Mb",
+      "type": "number"
+    },
+    "rejection_codes": {
+      "items": {
+        "$ref": "#/$defs/RejectionCode"
+      },
+      "title": "Rejection Codes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "is_feasible",
+    "planned_volume_mb",
+    "planned_cost_usd"
+  ],
+  "title": "FeasibilityResult",
+  "type": "object"
+}

@@ -1,0 +1,1 @@
+{"schema_version":"golden-scenario.v1","scenario":"A","target_mb":500.0,"expected":{"plan_feasible":true,"planned_mb":500.0,"delivered_mb":500.0},"fixture_model_versions":{"planner":"planner_v1","simulation":"task12"}}

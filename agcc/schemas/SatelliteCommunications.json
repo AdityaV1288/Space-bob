@@ -1,0 +1,57 @@
+{
+  "$defs": {
+    "Band": {
+      "enum": [
+        "S",
+        "X",
+        "Ka",
+        "UHF",
+        "VHF"
+      ],
+      "title": "Band",
+      "type": "string"
+    }
+  },
+  "description": "Communication system parameters for the satellite (Task 08 amendment).",
+  "properties": {
+    "band": {
+      "$ref": "#/$defs/Band",
+      "description": "Downlink frequency band"
+    },
+    "carrier_frequency_ghz": {
+      "description": "Carrier frequency in GHz",
+      "exclusiveMinimum": 0.0,
+      "title": "Carrier Frequency Ghz",
+      "type": "number"
+    },
+    "max_downlink_rate_mbps": {
+      "description": "Maximum downlink rate in Mbit/s",
+      "exclusiveMinimum": 0.0,
+      "title": "Max Downlink Rate Mbps",
+      "type": "number"
+    },
+    "min_elevation_deg": {
+      "description": "Minimum elevation angle for contact in degrees",
+      "maximum": 90.0,
+      "minimum": 0.0,
+      "title": "Min Elevation Deg",
+      "type": "number"
+    },
+    "protocol_efficiency": {
+      "description": "Protocol efficiency factor in (0, 1]",
+      "exclusiveMinimum": 0.0,
+      "maximum": 1.0,
+      "title": "Protocol Efficiency",
+      "type": "number"
+    }
+  },
+  "required": [
+    "band",
+    "carrier_frequency_ghz",
+    "max_downlink_rate_mbps",
+    "protocol_efficiency",
+    "min_elevation_deg"
+  ],
+  "title": "SatelliteCommunications",
+  "type": "object"
+}

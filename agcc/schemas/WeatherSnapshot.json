@@ -1,0 +1,206 @@
+{
+  "$defs": {
+    "Provenance": {
+      "description": "Records origin and currency of externally derived data.",
+      "properties": {
+        "assumption_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumption Fields",
+          "type": "array"
+        },
+        "fetched_at": {
+          "format": "date-time",
+          "title": "Fetched At",
+          "type": "string"
+        },
+        "observed_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observed At"
+        },
+        "source_name": {
+          "title": "Source Name",
+          "type": "string"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType"
+        },
+        "source_uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Uri"
+        },
+        "source_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Version"
+        }
+      },
+      "required": [
+        "source_type",
+        "source_name",
+        "fetched_at"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "SourceKind": {
+      "enum": [
+        "fixture",
+        "recorded",
+        "live"
+      ],
+      "title": "SourceKind",
+      "type": "string"
+    },
+    "SourceQuality": {
+      "enum": [
+        "verified",
+        "stale",
+        "assumed",
+        "unavailable"
+      ],
+      "title": "SourceQuality",
+      "type": "string"
+    },
+    "SourceType": {
+      "enum": [
+        "manual",
+        "catalog",
+        "fixture",
+        "forecast",
+        "measured",
+        "derived",
+        "not_configured"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    }
+  },
+  "description": "Normalized tropospheric / weather observation for a station.",
+  "properties": {
+    "cloud_cover_pct": {
+      "description": "Cloud cover %",
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Cloud Cover Pct",
+      "type": "number"
+    },
+    "fetched_at": {
+      "description": "Time the data was fetched (UTC)",
+      "format": "date-time",
+      "title": "Fetched At",
+      "type": "string"
+    },
+    "observed_at": {
+      "description": "Time the observation was made (UTC)",
+      "format": "date-time",
+      "title": "Observed At",
+      "type": "string"
+    },
+    "precipitation_mm_per_hr": {
+      "description": "Precipitation rate mm/hr",
+      "minimum": 0.0,
+      "title": "Precipitation Mm Per Hr",
+      "type": "number"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    },
+    "raw_payload_hash": {
+      "description": "SHA-256 hex digest of the raw source payload",
+      "maxLength": 71,
+      "minLength": 64,
+      "title": "Raw Payload Hash",
+      "type": "string"
+    },
+    "relative_humidity_pct": {
+      "description": "Relative humidity %",
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Relative Humidity Pct",
+      "type": "number"
+    },
+    "snapshot_id": {
+      "description": "Unique snapshot ID (prefix: event_)",
+      "title": "Snapshot Id",
+      "type": "string"
+    },
+    "source_kind": {
+      "$ref": "#/$defs/SourceKind"
+    },
+    "source_quality": {
+      "$ref": "#/$defs/SourceQuality"
+    },
+    "station_id": {
+      "title": "Station Id",
+      "type": "string"
+    },
+    "temperature_c": {
+      "description": "Air temperature in Celsius",
+      "title": "Temperature C",
+      "type": "number"
+    },
+    "valid_from": {
+      "description": "Start of validity window (UTC)",
+      "format": "date-time",
+      "title": "Valid From",
+      "type": "string"
+    },
+    "valid_until": {
+      "description": "End of validity window (UTC)",
+      "format": "date-time",
+      "title": "Valid Until",
+      "type": "string"
+    },
+    "wind_speed_mps": {
+      "description": "Wind speed m/s",
+      "minimum": 0.0,
+      "title": "Wind Speed Mps",
+      "type": "number"
+    }
+  },
+  "required": [
+    "snapshot_id",
+    "station_id",
+    "valid_from",
+    "valid_until",
+    "observed_at",
+    "fetched_at",
+    "precipitation_mm_per_hr",
+    "temperature_c",
+    "relative_humidity_pct",
+    "cloud_cover_pct",
+    "wind_speed_mps",
+    "source_kind",
+    "source_quality",
+    "raw_payload_hash",
+    "provenance"
+  ],
+  "title": "WeatherSnapshot",
+  "type": "object"
+}

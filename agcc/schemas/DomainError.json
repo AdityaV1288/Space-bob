@@ -1,0 +1,33 @@
+{
+  "description": "Serializable structured domain error.",
+  "properties": {
+    "code": {
+      "minLength": 1,
+      "title": "Code",
+      "type": "string"
+    },
+    "details": {
+      "additionalProperties": true,
+      "title": "Details",
+      "type": "object"
+    },
+    "entity_refs": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Entity Refs",
+      "type": "object"
+    },
+    "message": {
+      "minLength": 1,
+      "title": "Message",
+      "type": "string"
+    }
+  },
+  "required": [
+    "code",
+    "message"
+  ],
+  "title": "DomainError",
+  "type": "object"
+}

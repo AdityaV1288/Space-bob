@@ -1,0 +1,16 @@
+{
+  "contact_count": 4,
+  "cost": "418.0",
+  "deadline_met": false,
+  "delivered_volume_mb": 2376.53072,
+  "expected_delivered_volume_mb": 2376.53072,
+  "objective_value": 418.0,
+  "plan_churn": 0,
+  "replan_count": 1,
+  "runtime_ms": {},
+  "station_utilization": {
+    "station_demo_eastafrica": 0.368541,
+    "station_demo_eastasia": 0.360942,
+    "station_demo_southafrica": 0.270517
+  }
+}

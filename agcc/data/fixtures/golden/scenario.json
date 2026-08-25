@@ -1,0 +1,85 @@
+{
+  "fixed_random_seed": 14014,
+  "scenario_request": {
+    "scenario": {
+      "scenario_id": "scenario_golden01",
+      "name": "AGCC golden verification scenario",
+      "satellite_id": "sat_golden01",
+      "station_ids": [
+        "station_demo_eastafrica",
+        "station_demo_eastasia",
+        "station_demo_southafrica",
+        "station_demo_southamerica"
+      ],
+      "mission_id": "mission_golden01",
+      "constraints": {
+        "maximum_budget": "100000",
+        "currency": "USD",
+        "station_selection": {
+          "allow_all_eligible": false,
+          "authorized_station_ids": [
+            "station_demo_eastafrica",
+            "station_demo_eastasia",
+            "station_demo_southafrica",
+            "station_demo_southamerica"
+          ]
+        },
+        "planning_preference": "fastest",
+        "allow_additional_contact_proposals": true
+      }
+    },
+    "satellite": {
+      "satellite_id": "sat_golden01",
+      "name": "Golden circular LEO",
+      "orbit": {
+        "altitude_km": 550.0,
+        "inclination_deg": 53.0,
+        "raan_deg": 20.0,
+        "phase_deg": 10.0,
+        "epoch": "2026-08-21T00:00:00Z"
+      },
+      "comms": {
+        "band": "X",
+        "carrier_frequency_ghz": 9.6,
+        "max_downlink_rate_mbps": 100.0,
+        "protocol_efficiency": 0.9,
+        "polarization": "circular",
+        "min_elevation_deg": 5.0
+      },
+      "provenance": {
+        "source_type": "fixture",
+        "source_name": "AGCC Task 14 golden fixture",
+        "source_version": "1",
+        "fetched_at": "2026-08-21T00:00:00Z",
+        "assumption_fields": ["orbit", "communications"]
+      }
+    },
+    "mission": {
+      "mission_id": "mission_golden01",
+      "name": "Golden 3000 MB downlink",
+      "required_volume_mb": 3000.0,
+      "release_at": "2026-08-21T00:00:00Z",
+      "deadline_at": "2026-08-22T00:00:00Z"
+    }
+  },
+  "weather": {
+    "clear": {
+      "valid_from": "2026-08-21T00:00:00Z",
+      "valid_until": "2026-08-22T00:00:00Z",
+      "precipitation_mm_per_hr": 0.0,
+      "factor": 1.0
+    },
+    "later_degradation": {
+      "station_id": "station_demo_eastasia",
+      "valid_from": "2026-08-21T12:00:00Z",
+      "valid_until": "2026-08-22T00:00:00Z",
+      "precipitation_mm_per_hr": 15.0,
+      "verification_factor": 0.6
+    }
+  },
+  "station_outage": {
+    "station_id": "station_demo_eastasia",
+    "rate_multiplier": 0.0,
+    "description": "Golden fixture outage after first executed contact"
+  }
+}

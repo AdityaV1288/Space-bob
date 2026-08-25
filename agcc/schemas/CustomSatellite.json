@@ -1,0 +1,256 @@
+{
+  "$defs": {
+    "Band": {
+      "enum": [
+        "S",
+        "X",
+        "Ka",
+        "UHF",
+        "VHF"
+      ],
+      "title": "Band",
+      "type": "string"
+    },
+    "CustomCircularOrbit": {
+      "description": "Canonical circular-LEO orbit representation.",
+      "properties": {
+        "altitude_km": {
+          "description": "Orbital altitude in kilometers (200–2000)",
+          "maximum": 2000.0,
+          "minimum": 200.0,
+          "title": "Altitude Km",
+          "type": "number"
+        },
+        "argument_of_perigee_deg": {
+          "default": 0.0,
+          "title": "Argument Of Perigee Deg",
+          "type": "number"
+        },
+        "direction": {
+          "default": "",
+          "description": "PROGRADE or RETROGRADE (derived)",
+          "title": "Direction",
+          "type": "string"
+        },
+        "earth_radius_km": {
+          "default": 6378.137,
+          "title": "Earth Radius Km",
+          "type": "number"
+        },
+        "eccentricity": {
+          "default": 0.0,
+          "title": "Eccentricity",
+          "type": "number"
+        },
+        "epoch": {
+          "description": "Epoch of orbital elements (UTC)",
+          "format": "date-time",
+          "title": "Epoch",
+          "type": "string"
+        },
+        "inclination_deg": {
+          "description": "Inclination in degrees",
+          "maximum": 180.0,
+          "minimum": 0.0,
+          "title": "Inclination Deg",
+          "type": "number"
+        },
+        "input_mode": {
+          "$ref": "#/$defs/OrbitInputMode",
+          "default": "custom_circular"
+        },
+        "mu_km3_s2": {
+          "default": 398600.4418,
+          "title": "Mu Km3 S2",
+          "type": "number"
+        },
+        "phase_deg": {
+          "description": "Satellite phase (true anomaly) in degrees [0,360)",
+          "exclusiveMaximum": 360.0,
+          "minimum": 0.0,
+          "title": "Phase Deg",
+          "type": "number"
+        },
+        "raan_deg": {
+          "description": "Right ascension of ascending node in degrees [0,360)",
+          "exclusiveMaximum": 360.0,
+          "minimum": 0.0,
+          "title": "Raan Deg",
+          "type": "number"
+        }
+      },
+      "required": [
+        "altitude_km",
+        "inclination_deg",
+        "raan_deg",
+        "phase_deg",
+        "epoch"
+      ],
+      "title": "CustomCircularOrbit",
+      "type": "object"
+    },
+    "OrbitInputMode": {
+      "enum": [
+        "custom_circular"
+      ],
+      "title": "OrbitInputMode",
+      "type": "string"
+    },
+    "Provenance": {
+      "description": "Records origin and currency of externally derived data.",
+      "properties": {
+        "assumption_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumption Fields",
+          "type": "array"
+        },
+        "fetched_at": {
+          "format": "date-time",
+          "title": "Fetched At",
+          "type": "string"
+        },
+        "observed_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observed At"
+        },
+        "source_name": {
+          "title": "Source Name",
+          "type": "string"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType"
+        },
+        "source_uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Uri"
+        },
+        "source_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Version"
+        }
+      },
+      "required": [
+        "source_type",
+        "source_name",
+        "fetched_at"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "SatelliteCommunications": {
+      "description": "Communication system parameters for the satellite (Task 08 amendment).",
+      "properties": {
+        "band": {
+          "$ref": "#/$defs/Band",
+          "description": "Downlink frequency band"
+        },
+        "carrier_frequency_ghz": {
+          "description": "Carrier frequency in GHz",
+          "exclusiveMinimum": 0.0,
+          "title": "Carrier Frequency Ghz",
+          "type": "number"
+        },
+        "max_downlink_rate_mbps": {
+          "description": "Maximum downlink rate in Mbit/s",
+          "exclusiveMinimum": 0.0,
+          "title": "Max Downlink Rate Mbps",
+          "type": "number"
+        },
+        "min_elevation_deg": {
+          "description": "Minimum elevation angle for contact in degrees",
+          "maximum": 90.0,
+          "minimum": 0.0,
+          "title": "Min Elevation Deg",
+          "type": "number"
+        },
+        "protocol_efficiency": {
+          "description": "Protocol efficiency factor in (0, 1]",
+          "exclusiveMinimum": 0.0,
+          "maximum": 1.0,
+          "title": "Protocol Efficiency",
+          "type": "number"
+        }
+      },
+      "required": [
+        "band",
+        "carrier_frequency_ghz",
+        "max_downlink_rate_mbps",
+        "protocol_efficiency",
+        "min_elevation_deg"
+      ],
+      "title": "SatelliteCommunications",
+      "type": "object"
+    },
+    "SourceType": {
+      "enum": [
+        "manual",
+        "catalog",
+        "fixture",
+        "forecast",
+        "measured",
+        "derived",
+        "not_configured"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    }
+  },
+  "description": "Top-level satellite definition.",
+  "properties": {
+    "comms": {
+      "$ref": "#/$defs/SatelliteCommunications"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "orbit": {
+      "$ref": "#/$defs/CustomCircularOrbit"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    },
+    "satellite_id": {
+      "description": "Unique satellite ID (prefix: sat_)",
+      "title": "Satellite Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "satellite_id",
+    "name",
+    "orbit",
+    "comms",
+    "provenance"
+  ],
+  "title": "CustomSatellite",
+  "type": "object"
+}

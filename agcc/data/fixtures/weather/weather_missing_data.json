@@ -1,0 +1,1412 @@
+{
+  "stations": {
+    "station_demo_northarctic": [
+      {
+        "snapshot_id": "event_wx_station_demo_northarctic_00",
+        "station_id": "station_demo_northarctic",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "b2ae7cdd21513001cc2be6c7be56acc5098cff2d479fc2279b13f09b41f1f448",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_northarctic_01",
+        "station_id": "station_demo_northarctic",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "701a935c5f2200c3e32e5b6d10ca6f3454e98949c431128e2fc1a7fd576b568d",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_northarctic_02",
+        "station_id": "station_demo_northarctic",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "65dbedeb6bb83d3c92964577da9472b867bec77692a1429ceda077dac6dd469c",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_northarctic_03",
+        "station_id": "station_demo_northarctic",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "53bfa89b707653c95437eb1e11fd8975aac288f9ed1663cb4a6011c530949e08",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_northarctic_04",
+        "station_id": "station_demo_northarctic",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "24aa75b95092b1a495782c5eb5d9b2e9c95d5146628fe5815d9edb6a2251a8d1",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_northarctic_05",
+        "station_id": "station_demo_northarctic",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "9fac42a268b97b7742b8b60a5963ef46cf45951d91fabb8aa5d4a1411e1bad70",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_iceland": [
+      {
+        "snapshot_id": "event_wx_station_demo_iceland_00",
+        "station_id": "station_demo_iceland",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "31ea76837551d9442d4e0b21a4d9c574b39be7c37842eddb5a7cb0af43e7daa9",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_iceland_01",
+        "station_id": "station_demo_iceland",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "ecd983593bed19336454219fb48defdfbe6e7dfae7e819db396a7b40ac3b20ac",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_iceland_02",
+        "station_id": "station_demo_iceland",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "4dc63f4f3fe111df20750c71e4a6c0c2ee4a3d0764e5a722d96d5664d6bd94ab",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_iceland_03",
+        "station_id": "station_demo_iceland",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "e92af62209d8073695f18e4e5219fff750143d6436ac8bbeb04dfbf575a3ac8d",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_iceland_04",
+        "station_id": "station_demo_iceland",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "15be80669b781eeac72439c3304c27d2e06f955b616e9b7b843bb614bde4941e",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_iceland_05",
+        "station_id": "station_demo_iceland",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "fcab93294f7b73b407406886964b682bc53a7cd11487a78e3bec0298a920d080",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_centraleurope": [
+      {
+        "snapshot_id": "event_wx_station_demo_centraleurope_00",
+        "station_id": "station_demo_centraleurope",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "670b94f452538b264a5c428141c776ff8a88ffaa409686cffcdd776eddcb32b0",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_centraleurope_01",
+        "station_id": "station_demo_centraleurope",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "50e4d1a62b940f0d613fd96b3da401f5cae192fc1dd7f98d7358dc95b056a289",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_centraleurope_02",
+        "station_id": "station_demo_centraleurope",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "46ea924515a67dc9c246b16dd39ab0c1fd9727bc4b5a362329b46d42d5eeeefe",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_centraleurope_03",
+        "station_id": "station_demo_centraleurope",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "a2937e396e6e808892cf49a4d5c4a92939368ba8814f85c91695ebe8382467eb",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_centraleurope_04",
+        "station_id": "station_demo_centraleurope",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "896120f479972d4cfeca2fd2ae0ff75a850abc15a3d1e8ead06bef70b8ef986a",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_centraleurope_05",
+        "station_id": "station_demo_centraleurope",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "4b09b613ea7b2545561a40dcdc1c166b170c6bad595ac39d574e84a3c3b9243f",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_eastafrica": [
+      {
+        "snapshot_id": "event_wx_station_demo_eastafrica_00",
+        "station_id": "station_demo_eastafrica",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "44c4095efa84e62130d0ac55429913acc97e996ea6b1ce8af694636a8cbfe173",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastafrica_01",
+        "station_id": "station_demo_eastafrica",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "7b75deafcbb5381deddf5cb4d05f6ac667b964d6e022b53d9f032364640de158",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastafrica_02",
+        "station_id": "station_demo_eastafrica",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "e0b2e4de3b4ed28301579a9baae4b81714bb73f3c82b411e68bdd9c9398f0357",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastafrica_03",
+        "station_id": "station_demo_eastafrica",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "73bc1ed51a0d62ed373759f11e6f3eb49e652135daa8da1ecd6a35162babbc37",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastafrica_04",
+        "station_id": "station_demo_eastafrica",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "65e41193947d7d723094a8724ccf774ff3ab92f71aa8127d70c94090571240f5",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastafrica_05",
+        "station_id": "station_demo_eastafrica",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "42fbff4aa888e0458c5eb7d52681308d1f0f00eb19d7496ba20cbf574a7bbe63",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_southafrica": [
+      {
+        "snapshot_id": "event_wx_station_demo_southafrica_00",
+        "station_id": "station_demo_southafrica",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "2eb1dddc9f8042b324373434be1c0617c0a1b034256cd48d3bbe0861c8b9209b",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southafrica_01",
+        "station_id": "station_demo_southafrica",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "d30eecd2fe9606b30d4275bdcaf345657ffc3f5a42d60f790bb5bf1395c00de5",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southafrica_02",
+        "station_id": "station_demo_southafrica",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "df91f92cc0d13c8a86610d0924a21e4430f37520a51d07f13ed05ace3468c10d",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southafrica_03",
+        "station_id": "station_demo_southafrica",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "2404607248e38c9b1e837654f87cb1f241e60fee61f779bea12ed37b6b9daed4",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southafrica_04",
+        "station_id": "station_demo_southafrica",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "b391b4984a8066e0a106709ccf6e30c38aa8b15320682be7eed61cf2389c1784",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southafrica_05",
+        "station_id": "station_demo_southafrica",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "386a1b6f34a0e0420d1f2da1fb2a3bd84100c53543b66f1fb41e46af7994d1c1",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_india": [
+      {
+        "snapshot_id": "event_wx_station_demo_india_00",
+        "station_id": "station_demo_india",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "e5b76120060d52cec1f1f6b066ca31ba1de042063819be9ab1d816e2d397e5b3",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_india_01",
+        "station_id": "station_demo_india",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "eb04c252a97d3963dc3f5dc6717e88a952451a28c2b3e92367e5513c3eb6fd57",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_india_02",
+        "station_id": "station_demo_india",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "e360d69d80d3fa4b678a77fdeebea45c82001c9ab27db58691fd6c0a7190c8bb",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_india_03",
+        "station_id": "station_demo_india",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "a1d8ca3b0a1fe802402aaea04dc1de758b964bd31ba0b34d6d9da8aa7feea892",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_india_04",
+        "station_id": "station_demo_india",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "c39da5bb9a9b4c880204f1e29b2a07641d05cb204d914e0bb9a5ea956139092d",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_india_05",
+        "station_id": "station_demo_india",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "24bcb8aa33d7d92bded3f3bcd0bab02381b850c8e4199a6205323e6fda704d65",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_eastasia": [
+      {
+        "snapshot_id": "event_wx_station_demo_eastasia_00",
+        "station_id": "station_demo_eastasia",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "b402a21d7001eef10cacb5ff624587ac29f186c2daf17dc5ad9221b2cb099ea2",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastasia_01",
+        "station_id": "station_demo_eastasia",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "ffd88eec651adef2321ac8f5573edcffecc1ec515a8c71ab057afd2d738980e1",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastasia_02",
+        "station_id": "station_demo_eastasia",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "0a706ae875809c276b039b18b2b8e34078b5b10c025579e7ded4d7b5966a3b4c",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastasia_03",
+        "station_id": "station_demo_eastasia",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "7e9c9e5627f4817cf07c6fc807c23bc585aa885f6d37635a1f1a0269c7e50edf",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastasia_04",
+        "station_id": "station_demo_eastasia",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "6dc31908e2900e651c9627e58bad38d5820c5972516ac32380776ae7255db49a",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastasia_05",
+        "station_id": "station_demo_eastasia",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "8414d42fc27003ddab14e02ae84e4d9cc182d501e22c31cd7641ca8ac578ee8e",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_australia": [
+      {
+        "snapshot_id": "event_wx_station_demo_australia_00",
+        "station_id": "station_demo_australia",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "c5150d1743cbb9dd6961fca2d637b66ed97b7e2ffa73a7196f86bad1b8f03cfd",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_australia_01",
+        "station_id": "station_demo_australia",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "25cff4bb975bc72996d6f3d9034da64ac12e4f2bbc40f5973154df096488a1e2",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_australia_02",
+        "station_id": "station_demo_australia",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "cbcfac42ac1200f0225aa0303ae3e029e749050937914bc5c6fe7bbea43baf95",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_australia_03",
+        "station_id": "station_demo_australia",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "439a60715108b150c6746fb386c99a250d9c0efd73962082b6c79fe95b59a536",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_australia_04",
+        "station_id": "station_demo_australia",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "0d6eb642431afba025e1d244e9c536aa97042f9e1973b8aa75ff563f6a9fa257",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_australia_05",
+        "station_id": "station_demo_australia",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "d4e3dfe34e9090cc1e5f49859f663ac4d91121e8212024f188fda2f3dd199528",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_westcoastna": [
+      {
+        "snapshot_id": "event_wx_station_demo_westcoastna_00",
+        "station_id": "station_demo_westcoastna",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "6d3745fcd7447b7f323a9f8fad8b6c9fb50f84f15f1469900c7a47361251d72a",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_westcoastna_01",
+        "station_id": "station_demo_westcoastna",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "b50d7cb862a53b43bf706be81c66a4106b090e6cc769528c5ee0632c51c7e0f9",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_westcoastna_02",
+        "station_id": "station_demo_westcoastna",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "03d1315734ad276e7ed8b5457df6813c004c529a40f3168336e3b47b83ad8f9f",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_westcoastna_03",
+        "station_id": "station_demo_westcoastna",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "62a7ee4769b510d8c17248344447c5c2bb53a52623c81eb79e96ccd99fc291a0",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_westcoastna_04",
+        "station_id": "station_demo_westcoastna",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "6fa01862dabe8f96cac68018c0d998a4920b727723aceb46d45626e1c5ce8ab1",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_westcoastna_05",
+        "station_id": "station_demo_westcoastna",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "c7ffb8949a630f88e2534bbfbf0428cedc54455d7a23f8f33828c00cd22e5292",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_eastcoastna": [
+      {
+        "snapshot_id": "event_wx_station_demo_eastcoastna_00",
+        "station_id": "station_demo_eastcoastna",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "e8e77885b255a036204d402a85a7d0682cd1aab4e0243b8686457327f8e777c4",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastcoastna_01",
+        "station_id": "station_demo_eastcoastna",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "93d1d8021b03f07a38d6896079e6b6ba5f82b5aa663ead4a41e66c94108d833f",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastcoastna_02",
+        "station_id": "station_demo_eastcoastna",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "b0d9cfa74a8b6e35fdf2998afc70cbc62e680b7509e5040247711969a0e9e456",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastcoastna_03",
+        "station_id": "station_demo_eastcoastna",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "f46d55ca20a0fc20cd299e13cfa885f86afda8b708344352c605b17d7ae1d29c",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastcoastna_04",
+        "station_id": "station_demo_eastcoastna",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "e1f22fdcdcea77aea4c84c0802137ae4768541a854775346ad45692b208950ff",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_eastcoastna_05",
+        "station_id": "station_demo_eastcoastna",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "889137facad482ed87b56809f8cda38230ab1eac4d581bcf55a182606d738d2f",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ],
+    "station_demo_southamerica": [
+      {
+        "snapshot_id": "event_wx_station_demo_southamerica_00",
+        "station_id": "station_demo_southamerica",
+        "valid_from": "2024-03-20T12:00:00Z",
+        "valid_until": "2024-03-20T13:00:00Z",
+        "observed_at": "2024-03-20T12:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "d03d7285023c68a142801cedf84691debe171ca60ff2bc34507de7661d53e89f",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southamerica_01",
+        "station_id": "station_demo_southamerica",
+        "valid_from": "2024-03-20T13:00:00Z",
+        "valid_until": "2024-03-20T14:00:00Z",
+        "observed_at": "2024-03-20T13:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "27e2218db7e7d89b6269fb84049d6f28018af2fcb36c5734debdb16948248ecd",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southamerica_02",
+        "station_id": "station_demo_southamerica",
+        "valid_from": "2024-03-20T14:00:00Z",
+        "valid_until": "2024-03-20T15:00:00Z",
+        "observed_at": "2024-03-20T14:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "3709043575fb0b3750ec54b3c3682501fa25f77c36821ad58eb0fc6350787d8b",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southamerica_03",
+        "station_id": "station_demo_southamerica",
+        "valid_from": "2024-03-20T15:00:00Z",
+        "valid_until": "2024-03-20T16:00:00Z",
+        "observed_at": "2024-03-20T15:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "8fbcfa878eb1a51305bfd6f8eb76499758a8aa9d5d6ed0d5c4a70160539dca6b",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southamerica_04",
+        "station_id": "station_demo_southamerica",
+        "valid_from": "2024-03-20T16:00:00Z",
+        "valid_until": "2024-03-20T17:00:00Z",
+        "observed_at": "2024-03-20T16:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "1be5f40d4c9842bd47217070b3ae049cda6d36c81a9ddf2d28372f0b4ed637b5",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      },
+      {
+        "snapshot_id": "event_wx_station_demo_southamerica_05",
+        "station_id": "station_demo_southamerica",
+        "valid_from": "2024-03-20T17:00:00Z",
+        "valid_until": "2024-03-20T18:00:00Z",
+        "observed_at": "2024-03-20T17:00:00Z",
+        "fetched_at": "2024-03-20T12:00:00Z",
+        "precipitation_mm_per_hr": 0.0,
+        "temperature_c": 15.0,
+        "relative_humidity_pct": 60.0,
+        "cloud_cover_pct": 0.0,
+        "wind_speed_mps": 0.0,
+        "source_kind": "fixture",
+        "source_quality": "assumed",
+        "raw_payload_hash": "e780f5b0c7fe500708ddc8a66835e39fe1dc289d9b40c4c130d2470e372ef0fb",
+        "provenance": {
+          "source_type": "derived",
+          "source_name": "agcc_fixture",
+          "fetched_at": "2024-03-20T12:00:00Z"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_comment": "AGCC space-weather fixture \u2014 deterministic, covers 2024-03-20 12:00Z to 2024-03-21 12:00Z",
+  "snapshots": [
+    {
+      "snapshot_id": "event_sw_20240320_00",
+      "valid_from": "2024-03-20T12:00:00Z",
+      "valid_until": "2024-03-21T12:00:00Z",
+      "observed_at": "2024-03-20T12:00:00Z",
+      "fetched_at": "2024-03-20T12:00:00Z",
+      "kp_index": 1.0,
+      "dst_index_nt": -5.0,
+      "f107_sfu": 120.0,
+      "source_kind": "fixture",
+      "source_quality": "verified",
+      "provenance": {
+        "source_type": "derived",
+        "source_name": "agcc_fixture",
+        "fetched_at": "2024-03-20T12:00:00Z"
+      },
+      "raw_payload_hash": "97d0a87ad43069803cb242a4d9958a0972fcfafd2ece7079823683492e532d76"
+    }
+  ]
+}

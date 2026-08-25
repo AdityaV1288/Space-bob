@@ -1,0 +1,92 @@
+{
+  "$defs": {
+    "PlanningPreference": {
+      "description": "Planning optimization preference — does not relax hard constraints.",
+      "enum": [
+        "fastest",
+        "lowest_cost",
+        "balanced"
+      ],
+      "title": "PlanningPreference",
+      "type": "string"
+    },
+    "StationSelection": {
+      "description": "Authorization parameters for ground station selection in a scenario.",
+      "properties": {
+        "allow_all_eligible": {
+          "default": false,
+          "title": "Allow All Eligible",
+          "type": "boolean"
+        },
+        "authorized_provider_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Authorized Provider Ids",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "authorized_station_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Authorized Station Ids",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "excluded_station_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Excluded Station Ids",
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "title": "StationSelection",
+      "type": "object"
+    }
+  },
+  "description": "Hard constraints that govern planning for a scenario (Task 09).",
+  "properties": {
+    "allow_additional_contact_proposals": {
+      "default": false,
+      "title": "Allow Additional Contact Proposals",
+      "type": "boolean"
+    },
+    "currency": {
+      "description": "Fixed currency code for this scenario",
+      "minLength": 1,
+      "title": "Currency",
+      "type": "string"
+    },
+    "maximum_budget": {
+      "anyOf": [
+        {
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        }
+      ],
+      "description": "Maximum allowable cost (Decimal, same currency as scenario)",
+      "title": "Maximum Budget"
+    },
+    "planning_preference": {
+      "$ref": "#/$defs/PlanningPreference",
+      "default": "balanced"
+    },
+    "station_selection": {
+      "$ref": "#/$defs/StationSelection",
+      "description": "Authorized station selection for this scenario"
+    }
+  },
+  "required": [
+    "maximum_budget",
+    "currency"
+  ],
+  "title": "ScenarioConstraints",
+  "type": "object"
+}

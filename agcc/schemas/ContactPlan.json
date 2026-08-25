@@ -1,0 +1,135 @@
+{
+  "$defs": {
+    "ContactCommitment": {
+      "enum": [
+        "none",
+        "planned",
+        "committed"
+      ],
+      "title": "ContactCommitment",
+      "type": "string"
+    },
+    "FeasibilityResult": {
+      "description": "Outcome of a feasibility check against hard constraints.",
+      "properties": {
+        "is_feasible": {
+          "title": "Is Feasible",
+          "type": "boolean"
+        },
+        "message": {
+          "default": "",
+          "title": "Message",
+          "type": "string"
+        },
+        "planned_cost_usd": {
+          "minimum": 0.0,
+          "title": "Planned Cost Usd",
+          "type": "number"
+        },
+        "planned_volume_mb": {
+          "minimum": 0.0,
+          "title": "Planned Volume Mb",
+          "type": "number"
+        },
+        "rejection_codes": {
+          "items": {
+            "$ref": "#/$defs/RejectionCode"
+          },
+          "title": "Rejection Codes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "is_feasible",
+        "planned_volume_mb",
+        "planned_cost_usd"
+      ],
+      "title": "FeasibilityResult",
+      "type": "object"
+    },
+    "PlannedAllocation": {
+      "description": "Assignment of a data fragment to a planned or committed contact.",
+      "properties": {
+        "allocated_volume_mb": {
+          "minimum": 0.0,
+          "title": "Allocated Volume Mb",
+          "type": "number"
+        },
+        "commitment": {
+          "$ref": "#/$defs/ContactCommitment",
+          "default": "planned"
+        },
+        "contact_id": {
+          "description": "Unique contact ID (prefix: contact_)",
+          "title": "Contact Id",
+          "type": "string"
+        },
+        "cost_usd": {
+          "minimum": 0.0,
+          "title": "Cost Usd",
+          "type": "number"
+        },
+        "pass_id": {
+          "title": "Pass Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "contact_id",
+        "pass_id",
+        "allocated_volume_mb",
+        "cost_usd"
+      ],
+      "title": "PlannedAllocation",
+      "type": "object"
+    },
+    "RejectionCode": {
+      "enum": [
+        "budget_exceeded",
+        "deadline_missed",
+        "incompatible_band",
+        "station_unavailable",
+        "below_elevation",
+        "infeasible",
+        "policy"
+      ],
+      "title": "RejectionCode",
+      "type": "string"
+    }
+  },
+  "description": "A versioned ordered list of planned allocations for a scenario.",
+  "properties": {
+    "allocations": {
+      "items": {
+        "$ref": "#/$defs/PlannedAllocation"
+      },
+      "title": "Allocations",
+      "type": "array"
+    },
+    "feasibility": {
+      "$ref": "#/$defs/FeasibilityResult"
+    },
+    "plan_id": {
+      "description": "Unique plan ID (prefix: plan_)",
+      "title": "Plan Id",
+      "type": "string"
+    },
+    "scenario_id": {
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "version": {
+      "minimum": 0,
+      "title": "Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "plan_id",
+    "scenario_id",
+    "version",
+    "feasibility"
+  ],
+  "title": "ContactPlan",
+  "type": "object"
+}

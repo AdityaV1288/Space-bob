@@ -1,0 +1,1 @@
+{"schema_version":"golden-scenario.v1","scenario":"D","target_mb":500.0,"available_capacity_mb":450.0,"expected":{"feasible":false,"deadline_extension_s":600.0,"additional_budget_needed":"25.00","mission_complete":false}}

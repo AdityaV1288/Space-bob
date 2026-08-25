@@ -1,0 +1,699 @@
+{
+  "clear": [
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 9.635805962,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_abd0eb3669d3233d",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_52129cffbee47ad3",
+      "peak_effective_rate_mbps": 10.464868391,
+      "sample_count": 15,
+      "usable_capacity_mb": 175.636167172,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 18.216666832,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_64fa5edeb82c7084",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_f50c52e94bc9d194",
+      "peak_effective_rate_mbps": 24.167406259,
+      "sample_count": 34,
+      "usable_capacity_mb": 765.4920638,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 25.095931006,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_2196595abb48a8d5",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_9e52752bc8921f34",
+      "peak_effective_rate_mbps": 37.085692795,
+      "sample_count": 46,
+      "usable_capacity_mb": 1435.402489015,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 17.015653625,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_f650debbdbc5688e",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_3218931bb9fd4b85",
+      "peak_effective_rate_mbps": 23.429521557,
+      "sample_count": 39,
+      "usable_capacity_mb": 819.057372615,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 12.79409951,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_0fe5f2327e60a728",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_109f11f32da4e903",
+      "peak_effective_rate_mbps": 15.06208416,
+      "sample_count": 23,
+      "usable_capacity_mb": 365.140713732,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 60.71609607,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_243cf98c13b9283b",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_466ac4354c671e52",
+      "peak_effective_rate_mbps": 87.102812547,
+      "sample_count": 53,
+      "usable_capacity_mb": 4005.953681696,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 38.910777649,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_3ad8015829ac0d9e",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_b00ccf4a7f13cf52",
+      "peak_effective_rate_mbps": 56.974944918,
+      "sample_count": 46,
+      "usable_capacity_mb": 2230.243981279,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 14.309953138,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_3cd31eaf6a74db50",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_413fb509e6090eaa",
+      "peak_effective_rate_mbps": 18.708039058,
+      "sample_count": 33,
+      "usable_capacity_mb": 579.203360767,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 25.058387729,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_05e7ec05753d784a",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_edeeb8b11127271c",
+      "peak_effective_rate_mbps": 35.04065836,
+      "sample_count": 40,
+      "usable_capacity_mb": 1251.897816893,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 15.675377571,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_4f0eeb14dc431124",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_c54723cfdedeb56c",
+      "peak_effective_rate_mbps": 20.868096832,
+      "sample_count": 36,
+      "usable_capacity_mb": 695.148818877,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 30.268306223,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_6935444f07e7c67e",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_0bfa25fd445d188d",
+      "peak_effective_rate_mbps": 45.727471076,
+      "sample_count": 48,
+      "usable_capacity_mb": 1814.611533247,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 28.311266912,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_e83fc80d026f692b",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_007ade37a9e7f5a1",
+      "peak_effective_rate_mbps": 40.313355766,
+      "sample_count": 42,
+      "usable_capacity_mb": 1483.089816067,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 34.077490601,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_cf767f22a9275cf9",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_41e9cb08ff31bbab",
+      "peak_effective_rate_mbps": 49.166428728,
+      "sample_count": 45,
+      "usable_capacity_mb": 1909.731511496,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 11.401508043,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_c0bbe2aa5e695fb3",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_4f0ab26cda6fe152",
+      "peak_effective_rate_mbps": 12.936057996,
+      "sample_count": 18,
+      "usable_capacity_mb": 254.319603799,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 26.23631142,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_1523eb7165bae1ab",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_8da6d41c7c2a17d8",
+      "peak_effective_rate_mbps": 39.111175189,
+      "sample_count": 46,
+      "usable_capacity_mb": 1506.263787837,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 18.791320228,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_4d140bd67105f114",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_37bbe3aee0563c3c",
+      "peak_effective_rate_mbps": 24.964388728,
+      "sample_count": 35,
+      "usable_capacity_mb": 811.126844563,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 35.983380457,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_afd3c16fcececd4a",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_874068cedbe7feee",
+      "peak_effective_rate_mbps": 55.09359958,
+      "sample_count": 50,
+      "usable_capacity_mb": 2248.419085515,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 50.022385964,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_8cec47b7075cbbee",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_54818cc25d9f9363",
+      "peak_effective_rate_mbps": 72.781547757,
+      "sample_count": 48,
+      "usable_capacity_mb": 2980.905177421,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 13.916210437,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_26c3aa55be10b6cb",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_a091d3b5e2bd8284",
+      "peak_effective_rate_mbps": 17.068397551,
+      "sample_count": 27,
+      "usable_capacity_mb": 459.109681433,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 12.931418942,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_9e7d316af5d6a6b1",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_5f21dda97fffc2cf",
+      "peak_effective_rate_mbps": 16.098399203,
+      "sample_count": 30,
+      "usable_capacity_mb": 476.27852466,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 14.662884276,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_763c35114c3e20d9",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_3cf6fb1354bd4df0",
+      "peak_effective_rate_mbps": 18.238166468,
+      "sample_count": 28,
+      "usable_capacity_mb": 509.974448515,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 49.716826586,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_adca5dd3318bd541",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_20dca9af2b9c50a2",
+      "peak_effective_rate_mbps": 71.685529417,
+      "sample_count": 47,
+      "usable_capacity_mb": 2920.075727519,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 18.09498113,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_cec837092f8bc096",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_2c1d78a8fb7a31e5",
+      "peak_effective_rate_mbps": 25.079496588,
+      "sample_count": 40,
+      "usable_capacity_mb": 894.464624248,
+      "weather_data_quality": "assumed"
+    }
+  ],
+  "degraded": [
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 9.635805962,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_abd0eb3669d3233d",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_52129cffbee47ad3",
+      "peak_effective_rate_mbps": 10.464868391,
+      "sample_count": 15,
+      "usable_capacity_mb": 175.636167172,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 18.216666832,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_64fa5edeb82c7084",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_f50c52e94bc9d194",
+      "peak_effective_rate_mbps": 24.167406259,
+      "sample_count": 34,
+      "usable_capacity_mb": 765.4920638,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 25.095931006,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_2196595abb48a8d5",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_9e52752bc8921f34",
+      "peak_effective_rate_mbps": 37.085692795,
+      "sample_count": 46,
+      "usable_capacity_mb": 1435.402489015,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 17.015653625,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_f650debbdbc5688e",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_3218931bb9fd4b85",
+      "peak_effective_rate_mbps": 23.429521557,
+      "sample_count": 39,
+      "usable_capacity_mb": 819.057372615,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 12.79409951,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_0fe5f2327e60a728",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_109f11f32da4e903",
+      "peak_effective_rate_mbps": 15.06208416,
+      "sample_count": 23,
+      "usable_capacity_mb": 365.140713732,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 60.71609607,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_243cf98c13b9283b",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_466ac4354c671e52",
+      "peak_effective_rate_mbps": 87.102812547,
+      "sample_count": 53,
+      "usable_capacity_mb": 4005.953681696,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 38.910777649,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_3ad8015829ac0d9e",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_b00ccf4a7f13cf52",
+      "peak_effective_rate_mbps": 56.974944918,
+      "sample_count": 46,
+      "usable_capacity_mb": 2230.243981279,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 14.309953138,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_3cd31eaf6a74db50",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_413fb509e6090eaa",
+      "peak_effective_rate_mbps": 18.708039058,
+      "sample_count": 33,
+      "usable_capacity_mb": 579.203360767,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 25.058387729,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_05e7ec05753d784a",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_edeeb8b11127271c",
+      "peak_effective_rate_mbps": 35.04065836,
+      "sample_count": 40,
+      "usable_capacity_mb": 1251.897816893,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 15.675377571,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_4f0eeb14dc431124",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_c54723cfdedeb56c",
+      "peak_effective_rate_mbps": 20.868096832,
+      "sample_count": 36,
+      "usable_capacity_mb": 695.148818877,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 30.268306223,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_6935444f07e7c67e",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_0bfa25fd445d188d",
+      "peak_effective_rate_mbps": 45.727471076,
+      "sample_count": 48,
+      "usable_capacity_mb": 1814.611533247,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 28.311266912,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_e83fc80d026f692b",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_007ade37a9e7f5a1",
+      "peak_effective_rate_mbps": 40.313355766,
+      "sample_count": 42,
+      "usable_capacity_mb": 1483.089816067,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 34.077490601,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_cf767f22a9275cf9",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_41e9cb08ff31bbab",
+      "peak_effective_rate_mbps": 49.166428728,
+      "sample_count": 45,
+      "usable_capacity_mb": 1909.731511496,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 11.401508043,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_c0bbe2aa5e695fb3",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_4f0ab26cda6fe152",
+      "peak_effective_rate_mbps": 12.936057996,
+      "sample_count": 18,
+      "usable_capacity_mb": 254.319603799,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "GoldenWeatherDegradationFactor",
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 15.741786852,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_1523eb7165bae1ab",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_8da6d41c7c2a17d8",
+      "peak_effective_rate_mbps": 23.466705113,
+      "sample_count": 46,
+      "usable_capacity_mb": 903.758272702,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 18.791320228,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_4d140bd67105f114",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_37bbe3aee0563c3c",
+      "peak_effective_rate_mbps": 24.964388728,
+      "sample_count": 35,
+      "usable_capacity_mb": 811.126844563,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "GoldenWeatherDegradationFactor",
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 21.590028274,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_afd3c16fcececd4a",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_874068cedbe7feee",
+      "peak_effective_rate_mbps": 33.056159748,
+      "sample_count": 50,
+      "usable_capacity_mb": 1349.051451309,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 50.022385964,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_8cec47b7075cbbee",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_54818cc25d9f9363",
+      "peak_effective_rate_mbps": 72.781547757,
+      "sample_count": 48,
+      "usable_capacity_mb": 2980.905177421,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 13.916210437,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_26c3aa55be10b6cb",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_a091d3b5e2bd8284",
+      "peak_effective_rate_mbps": 17.068397551,
+      "sample_count": 27,
+      "usable_capacity_mb": 459.109681433,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "GoldenWeatherDegradationFactor",
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 7.758851365,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_9e7d316af5d6a6b1",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_5f21dda97fffc2cf",
+      "peak_effective_rate_mbps": 9.659039522,
+      "sample_count": 30,
+      "usable_capacity_mb": 285.767114796,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 14.662884276,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_763c35114c3e20d9",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_3cf6fb1354bd4df0",
+      "peak_effective_rate_mbps": 18.238166468,
+      "sample_count": 28,
+      "usable_capacity_mb": 509.974448515,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 49.716826586,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_adca5dd3318bd541",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_20dca9af2b9c50a2",
+      "peak_effective_rate_mbps": 71.685529417,
+      "sample_count": 47,
+      "usable_capacity_mb": 2920.075727519,
+      "weather_data_quality": "assumed"
+    },
+    {
+      "assumptions": [
+        "InterpolatedPassElevation",
+        "NoWeatherAttenuationModel"
+      ],
+      "average_effective_rate_mbps": 18.09498113,
+      "base_rate_mbps": 100.0,
+      "capacity_id": "capacity_cec837092f8bc096",
+      "model_version": "capacity_v1",
+      "pass_id": "pass_2c1d78a8fb7a31e5",
+      "peak_effective_rate_mbps": 25.079496588,
+      "sample_count": 40,
+      "usable_capacity_mb": 894.464624248,
+      "weather_data_quality": "assumed"
+    }
+  ]
+}

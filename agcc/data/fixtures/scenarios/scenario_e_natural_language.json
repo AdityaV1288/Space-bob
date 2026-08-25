@@ -1,0 +1,1 @@
+{"schema_version":"golden-scenario.v1","scenario":"E","target_mb":500.0,"text":"station_alpha outage","expected":{"proposal_type":"station_outage","mutates_before_confirmation":false,"confirmed_multiplier":0.0,"replan_required":true}}
